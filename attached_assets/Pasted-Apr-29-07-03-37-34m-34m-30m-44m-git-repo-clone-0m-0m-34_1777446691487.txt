@@ -1,0 +1,96 @@
+Apr 29 07:03:37  [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+Apr 29 07:03:37  [34m│[0m [34m › fetching app source code[0m
+Apr 29 07:03:37  [34m│[0m => Selecting branch "main"
+Apr 29 07:03:49  [34m│[0m => Checking out commit "0d97f5b46c7726c0cfc4a3a1098eaf334947a511"
+Apr 29 07:03:49  [34m│[0m 
+Apr 29 07:03:49  [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+Apr 29 07:03:49  [34m╰────────────────────────────────────────╼[0m
+Apr 29 07:03:49  
+Apr 29 07:03:49  [34m › configuring build-time app environment variables:[0m
+Apr 29 07:03:49       DO_DATABASE_URL SIGNSUITEIQ_SSO_SECRET
+Apr 29 07:03:49  
+Apr 29 07:03:50  [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+Apr 29 07:03:50  [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+Apr 29 07:03:52  [34m│[0m Detected the following buildpacks suitable to build your app:
+Apr 29 07:03:52  [34m│[0m 
+Apr 29 07:03:52  [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+Apr 29 07:03:52  [34m│[0m    heroku/nodejs                  v0.341.5  (Node.js)
+Apr 29 07:03:52  [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+Apr 29 07:03:52  [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+Apr 29 07:03:52  [34m╰─────────────────────────────────────────────╼[0m
+Apr 29 07:03:52  
+Apr 29 07:03:52  [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+Apr 29 07:03:52  [34m│[0m [33;1mWarning: [0mno analyzed metadata found at path '/layers/analyzed.toml'
+Apr 29 07:03:52  [34m│[0m Timer: Builder started at 2026-04-29T07:03:52Z
+Apr 29 07:03:52  [34m│[0m Project contains pnpm-lock.yaml, using pnpm
+Apr 29 07:03:52  [34m│[0m        
+Apr 29 07:03:52  [34m│[0m -----> Creating runtime environment
+Apr 29 07:03:52  [34m│[0m        
+Apr 29 07:03:52  [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+Apr 29 07:03:52  [34m│[0m        NODE_VERBOSE=false
+Apr 29 07:03:52  [34m│[0m        NODE_ENV=
+Apr 29 07:03:52  [34m│[0m        NODE_MODULES_CACHE=true
+Apr 29 07:03:52  [34m│[0m        
+Apr 29 07:03:52  [34m│[0m -----> Installing binaries
+Apr 29 07:03:52  [34m│[0m        engines.node (package.json):   unspecified
+Apr 29 07:03:52  [34m│[0m        engines.npm (package.json):    unspecified (use default)
+Apr 29 07:03:52  [34m│[0m        engines.pnpm (package.json):   unspecified (use default)
+Apr 29 07:03:52  [34m│[0m        
+Apr 29 07:03:52  [34m│[0m        Resolving node version 22.x...
+Apr 29 07:03:52  [34m│[0m        Downloading and installing node 22.22.2...
+Apr 29 07:03:53  [34m│[0m        Validating checksum
+Apr 29 07:03:55  [34m│[0m        Using default npm version: 10.9.7
+Apr 29 07:03:55  [34m│[0m        Downloading and installing pnpm (latest)
+Apr 29 07:03:58  [34m│[0m        Using pnpm 10.33.2
+Apr 29 07:03:58  [34m│[0m         !     Default pnpm version used
+Apr 29 07:03:58  [34m│[0m        
+Apr 29 07:03:58  [34m│[0m               A pnpm lockfile (pnpm-lock.yaml) was detected but no specific version of pnpm was defined in package.json in either of the following fields:
+Apr 29 07:03:58  [34m│[0m               - "packageManager"
+Apr 29 07:03:58  [34m│[0m               - "engines.pnpm"
+Apr 29 07:03:58  [34m│[0m        
+Apr 29 07:03:58  [34m│[0m               Without a specific version defined, this build will use "pnpm@latest" by default. We highly recommend setting an explicit version
+Apr 29 07:03:58  [34m│[0m               of pnpm to improve the reliability of your builds.
+Apr 29 07:03:58  [34m│[0m               https://devcenter.heroku.com/articles/nodejs-support
+Apr 29 07:03:58  [34m│[0m        
+Apr 29 07:03:59  [34m│[0m        
+Apr 29 07:03:59  [34m│[0m -----> Installing dependencies
+Apr 29 07:03:59  [34m│[0m        Running 'pnpm install' with pnpm-lock.yaml
+Apr 29 07:04:10  [34m│[0m        
+Apr 29 07:04:10  [34m│[0m -----> Build
+Apr 29 07:04:10  [34m│[0m        Running build
+Apr 29 07:04:10  [34m│[0m        
+Apr 29 07:04:10  [34m│[0m        > workspace@0.0.0 build /workspace
+Apr 29 07:04:10  [34m│[0m        > pnpm run typecheck && pnpm -r --if-present run build
+Apr 29 07:04:10  [34m│[0m        
+Apr 29 07:04:10  [34m│[0m        
+Apr 29 07:04:10  [34m│[0m        > workspace@0.0.0 typecheck /workspace
+Apr 29 07:04:10  [34m│[0m        > pnpm run typecheck:libs && pnpm -r --filter "./artifacts/**" --filter "./scripts" --if-present run typecheck
+Apr 29 07:04:10  [34m│[0m        
+Apr 29 07:04:11  [34m│[0m        
+Apr 29 07:04:11  [34m│[0m        > workspace@0.0.0 typecheck:libs /workspace
+Apr 29 07:04:11  [34m│[0m        > tsc --build
+Apr 29 07:04:11  [34m│[0m        
+Apr 29 07:04:15  [34m│[0m        /workspace/scripts:
+Apr 29 07:04:15  [34m│[0m         ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/scripts@0.0.0 typecheck: `tsc -p tsconfig.json --noEmit`
+Apr 29 07:04:15  [34m│[0m        Exit status 2
+Apr 29 07:04:15  [34m│[0m         ELIFECYCLE  Command failed with exit code 2.
+Apr 29 07:04:15  [34m│[0m         ELIFECYCLE  Command failed with exit code 2.
+Apr 29 07:04:15  [34m│[0m 
+Apr 29 07:04:15  [34m│[0m -----> Build failed
+Apr 29 07:04:15  [34m│[0m        
+Apr 29 07:04:15  [34m│[0m        We're sorry this build is failing! You can troubleshoot common issues here:
+Apr 29 07:04:15  [34m│[0m        https://devcenter.heroku.com/articles/troubleshooting-node-deploys
+Apr 29 07:04:15  [34m│[0m        
+Apr 29 07:04:15  [34m│[0m        Some possible problems:
+Apr 29 07:04:15  [34m│[0m        
+Apr 29 07:04:15  [34m│[0m        - Node version not specified in package.json
+Apr 29 07:04:15  [34m│[0m          https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version
+Apr 29 07:04:15  [34m│[0m        
+Apr 29 07:04:15  [34m│[0m        Love,
+Apr 29 07:04:15  [34m│[0m        Heroku
+Apr 29 07:04:15  [34m│[0m        
+Apr 29 07:04:15  [34m│[0m Timer: Builder ran for 23.35954727s and ended at 2026-04-29T07:04:15Z
+Apr 29 07:04:15  [34m│[0m [31;1mERROR: [0mfailed to build: exit status 2
+Apr 29 07:04:15  [34m│[0m 
+Apr 29 07:04:15  [34m│[0m 
+Apr 29 07:04:15  [34m│[0m [31m ✘ build failed[0m

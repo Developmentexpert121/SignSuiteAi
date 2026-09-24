@@ -1,0 +1,9 @@
+- [coming_soon flag](coming-soon-flag.md) — DB/admin-owned flag (products_config + plans_config); reset by reseeds; gates display and launch/purchase across many surfaces.
+- [under_maintenance flag](under-maintenance-flag.md) — operational (not marketing) per-product flag; gates launch (sso/issue 503); shown only on Dashboard launcher + widget; admin quick-toggles.
+- [product↔plan pairing](product-plan-pairing.md) — every product has a 1:1 plan (same key), auto-created atomically; Full Suite membership = all non-coming-soon products, auto-synced on product writes.
+- [product logo rendering](product-logo-rendering.md) — hero logo comes from DB logo_url with `brightness-0 invert`; logos MUST be transparent PNGs; replace with NEW filename (30d cache).
+- [api-server static paths](server-static-paths.md) — uploads/static dirs MUST use __dirname not process.cwd(); prod starts from repo root → cwd-relative paths 404 in prod only.
+- [prod content data gap](prod-content-data-gap.md) — bare prod product pages = empty products_config.page_content in the SEPARATE prod DB, not stale code; fix by copying page_content/logo_url dev→prod (uploads are git-tracked).
+- [cross-app provisioning](cross-app-provisioning.md) — HTTP queue (provision_jobs → child /api/internal/provision-user) under company OWNER (admin_id, by email); 401 in NEW_PROD after a CHILD redeploy = real SSO_SECRET mismatch (env-only fix); granting/revoking access on an EXISTING user must mirror per-app (upsert/delete) or it stays SignSuiteIQ-local.
+- [InstallIQ production DB](installiq-database.md) — separate-product DB (DO trusted-sources gotcha); near-identical users schema (+signsuiteiq_user_id); how to copy missing users into DO.
+- [new-prod database](new-prod-database.md) — live prod uses a SEPARATE DO Postgres (not workspace DO_DATABASE_URL); a migration blanked users.company_id, breaking owner-grouping; restore from snapshot by email.

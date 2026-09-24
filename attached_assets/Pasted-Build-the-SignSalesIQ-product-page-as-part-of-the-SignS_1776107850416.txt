@@ -1,0 +1,186 @@
+Build the SignSalesIQ product page as part of the SignSuiteIQ.ai website. Standalone page at /signsalesiq. Matches the real SignSalesIQ application's dark navy and cyan color theme.
+
+TECH STACK
+
+Next.js 14 (App Router)
+Tailwind CSS
+Framer Motion for scroll animations
+Inter font (Google Fonts)
+
+
+BRAND & COLOR SYSTEM — SignSalesIQ specific
+
+Primary navy dark: #0B1E3D
+Navy mid: #1B3A6B
+Cyan accent: #29ABE2
+Cyan light fill: #E6F1FB
+Cyan dark text: #185FA5
+Background: #F8FAFC
+Card surface: #F4F6F9
+Card border: #E8ECF0
+Success green: #1D9E75
+Green fill: #E1F5EE
+Warning orange: #F5A623
+Warning fill: #FFF3DC
+Body text: #1A1A2E
+Muted text: #64748B
+White: #FFFFFF
+
+Typography: Inter, heading weight 500, body weight 400, line-height 1.7. UI labels uppercase letter-spacing 3px.
+Design: Dark navy sidebar and hero. Clean white cards on light gray background. Cyan as the single accent color. Browser chrome frames on all screenshots. 0.5px borders throughout.
+
+SCREENSHOT FILES
+Place all screenshots in /public/signsalesiq/screenshots/. Files to upload:
+
+login.png — SignSalesIQ login page showing "AI-Powered Sign Sales" navy sidebar with wave design
+dashboard.png — Dashboard with pipeline stats (25 Total, 1 Won, 5 Follow-up, 0 Lost) and recent opportunities list
+new-opportunity.png — New Opportunity form showing Client Information and Sign Specifications sections
+sign-types.png — Full sign type list showing 49 sign types with Interior/Exterior badges
+reference-measurements.png — Street view photo with measurement overlay box, blue corner dots, orange 2.5ft reference label, and green "Scale set · Sign area ≈ 8'5" × 4'9"" result bar
+mockup-result.png — AI-generated awning mockup on Ieans Pizza building showing before/after with Save Image and Crop Sign buttons
+mockup-2.png — Second mockup example showing feather flag sign placement
+sign-type-detail.png — Sign type detail page showing Before/After side-by-side for awning sign with Good/Better/Best options
+local-sign-code.png — Local Sign Code Regulations page for 918 Main St Waltham MA showing permit requirements, Chapter 59 rules, size limits
+pdf-proposal.png — Branded PDF printout showing FASTSIGNS of Waltham header, client details, sign types, before/after photos, Good Option tier badge, project notes
+
+All screenshots displayed in <BrowserFrame> component with red/orange/green dots and URL bar app.signsalesiq.com/[page].
+
+PAGE STRUCTURE
+
+NAV (sticky, navy #0B1E3D background)
+Left: SignSalesIQ logo (IQ in cyan) + "Visualizing the win" subtext
+Center: Features, Pricing, Back to SignSuiteIQ links (white muted text)
+Right: Cyan "Start free trial" button
+
+HERO SECTION
+Two-column layout. Navy #0B1E3D background. Left text, right screenshot rising from bottom.
+Left:
+
+Pill badge: "● Next-Gen Sign Sales Platform" (cyan border, cyan text, dark fill)
+H1 white: "AI-Powered" / H1 cyan: "Sign Sales"
+Body: "From mockup to proposal to close — all in one platform. Close deals faster without bothering your designer or disrupting your workflow."
+Feature pills row: Mockups · Proposals · Tracking · Local Sign Code
+Two CTAs: "Watch the demo" (cyan filled) + "Start free trial" (outlined white)
+Stats bar (border-top white 15% opacity): 49+ Sign types · Minutes not days · 100% AI-generated
+
+Right: Browser frame showing dashboard.png screenshot. Frame rises from bottom of hero with no bottom border-radius, appears to float up from the section.
+
+TRUST BAND (navy, below hero)
+Centered horizontal row with green checkmarks:
+✓ 256-bit SSL · ✓ SOC 2 Ready · ✓ 99.9% Uptime · ✓ Role-based access control · ✓ 49+ sign types trained
+
+STATS BAND (cyan #29ABE2 background)
+4 stats centered: 49+ Sign types · Minutes (vs 3–5 days) · Interior & Exterior · Good / Better / Best
+
+FEATURE SECTIONS (alternating layout, Framer Motion fade-up on scroll)
+Feature 01 — 49+ Sign Types
+Screenshot: sign-types.png in browser frame
+Copy:
+
+Eyebrow: "01 — Sign Types"
+Headline: "49+ sign types, interior & exterior, already trained"
+Body: "Every major sign type your team sells is already in the system — channel letters, awnings, monument signs, ADA, vehicle wraps, dimensional letters, EMC boards and dozens more."
+Bullets: A-Frame, ADA, Awnings, Banners, Blade Signs / Channel Letters (Front-Lit, Back-Lit, Raceway) / Dimensional Letters, Door Graphics, EMC boards / Feather Flags, Light Box, Monument, Pylon, Vehicle Wraps / Interior & exterior — both fully supported
+
+Show a scrollable list UI matching the real app — Interior/Exterior badges in blue/purple, sign names, "Copy & Customize" actions on right. Show count "49 sign types" in header.
+Feature 02 — Reference Measurements
+Screenshot: reference-measurements.png in browser frame
+Copy:
+
+Eyebrow: "02 — Reference Measurements"
+Headline: "Measure the sign area without a site visit"
+Body: "Use Google Street View or any head-on building photo. Draw a reference line on a known object — a door, a brick, a window — enter its real-world size, and SignSalesIQ calculates the exact sign area instantly."
+Bullets: Works with Google Street View or uploaded photos / Draw reference on any known object / AI calculates sign area — "8'5" × 4'9" (39.8 sq ft)" / Saves hours of site visit time per opportunity
+
+Below screenshot show the green result bar: "✓ Scale set · Sign area ≈ 8'5" × 4'9" (39.8 sq ft · based on 2.5 ft reference)"
+Feature 03 — AI Mockup Generation
+Screenshot: mockup-result.png showing Ieans Pizza awning before/after, with mockup-2.png as a smaller floating card overlapping the corner
+Copy:
+
+Eyebrow: "03 — AI Mockup Generation"
+Headline: "From street view to polished mockup in minutes"
+Body: "Upload a building photo or pull from Google Street View. Add logo assets, pick your sign type, set your specs — and let AI generate a realistic mockup placed directly on the real building."
+Bullets: Upload building photo or use Google Street View / Add logo assets from web or high-res file / Pick sign type, location, budget range & duration / Optional AI prompt for custom styling / Before/after mockup generated in minutes / Save Image or Crop Sign for delivery
+
+Feature 04 — Local Sign Code
+Screenshot: local-sign-code.png in browser frame
+Copy:
+
+Eyebrow: "04 — Local Sign Code"
+Headline: "Local sign code rules built into every opportunity"
+Body: "Enter the client's address and SignSalesIQ automatically pulls the local jurisdiction's sign code — permit requirements, size limits, placement rules, and zoning restrictions. Know before you propose."
+Bullets: Auto-pulls local sign code by client address / Permit requirements flagged automatically / Size, placement & zoning rules included / Sign permit warnings appear on proposal output / Currently available for major US jurisdictions
+
+Show the amber permit warning banner: "Sign Permit Will Be Needed for These Sign Types: Awning"
+Feature 05 — PDF Proposal Output
+Screenshot: pdf-proposal.png — show as a document preview with slight rotation/shadow effect to look like a printed page
+Copy:
+
+Eyebrow: "05 — Branded Proposals"
+Headline: "Send a branded proposal before you leave the meeting"
+Body: "Every opportunity generates a professional PDF — complete with your company branding, before/after mockups, sign specs, permit notices, and Good/Better/Best tier recommendations."
+Bullets: Branded with company name, address & contact / Before/after mockup images side by side / Good / Better / Best pricing tiers / Permit notices from local sign code / Export PDF or email directly to client / Send while still in the sales meeting
+
+Feature 06 — New Opportunity Form
+Screenshot: new-opportunity.png in browser frame
+Copy:
+
+Eyebrow: "06 — Opportunity Management"
+Headline: "Every sale starts with a new opportunity"
+Body: "Create a new opportunity in seconds — client info, sign specs, budget, target audience, and read distance. Everything in one clean form that feeds the entire workflow."
+Bullets: Client information: business name, address, contact, email, phone / Sign specifications: location type, sign type, budget range, duration / Target audience and read distance inputs / Sign Code Lookup toggle — auto-pulls local rules / Add multiple sign specs to a single opportunity
+
+
+SPEED COMPARISON SECTION (white background)
+Large centered headline: "Close deals before your competition even sends a quote"
+Two cards side by side with VS between:
+
+Left card (light gray): "Traditional process" — "3–5 days" in red — "Design team, revisions, back-and-forth"
+Right card (dark navy): "With SignSalesIQ" — "Minutes" in cyan — "While still in the meeting"
+
+Below: Role-based access section
+Headline: "Role-based access for your whole team"
+Three role cards:
+
+Admin — Full access: company settings, users, rules engine, subscription, all opportunities
+Sales — Create and manage opportunities, generate mockups, send proposals to clients
+Project Management — View and track all opportunities, monitor pipeline and follow-up queues
+
+
+WORKFLOW DIAGRAM SECTION (navy background, orange accents)
+5-step animated horizontal flow:
+
+Create opportunity — Enter client info & sign specs
+Measure remotely — Reference tool calculates sign area from photo
+Generate mockup — AI places sign on real building in minutes
+Check sign code — Local permits & rules auto-pulled by address
+Send proposal — Branded PDF emailed or downloaded instantly
+
+
+BOTTOM CTA SECTION (navy background)
+Eyebrow: "Ready to close faster?"
+Headline: "Visualize the win — before you leave the meeting."
+Subtext: "Stop waiting on designers. Start closing deals the same day you walk in the door."
+Two buttons: "Watch the demo" (cyan) + "Start free trial" (outlined white)
+
+ANIMATIONS
+
+All sections fade up on scroll (opacity 0→1, y 30→0, 0.5s)
+Feature rows alternate slide in left/right
+Speed comparison cards slide in from opposite sides
+Workflow step numbers count up on scroll
+Dashboard stats count up from 0 on scroll entry
+
+
+COMPONENTS
+
+<SignSalesNav /> — sticky navy nav
+<HeroSection /> — navy, badge pill, feature pills, stats bar
+<TrustBand /> — navy, green checkmarks
+<StatsBand /> — cyan background
+<FeatureRow /> — alternating layout
+<BrowserFrame /> — reusable browser chrome wrapper
+<SpeedComparison /> — side by side with VS
+<RoleCards /> — three-column grid
+<WorkflowDiagram /> — 5-step animated
+<CTABand /> — navy bottom CTA

@@ -1,0 +1,53 @@
+Apr 29 13:15:13 [signsuiteai] {"level":30,"time":1777468513285,"pid":30,"hostname":"signsuiteai-6bb89dc789-zm8dw","port":8080,"msg":"Server listening"}
+Apr 29 13:15:13 [signsuiteai] error: relation "stripe.accounts" does not exist
+Apr 29 13:15:13 [signsuiteai]     at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+Apr 29 13:15:13 [signsuiteai]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 13:15:13 [signsuiteai]     at async PostgresClient.getAccountIdByApiKeyHash (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:239:20)
+Apr 29 13:15:13 [signsuiteai]     at async StripeSync.getAccountId (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:583:25)
+Apr 29 13:15:13 [signsuiteai]     at async StripeSync.getCurrentAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:632:5)
+Apr 29 13:15:13 [signsuiteai]     at async StripeSync.syncBackfill (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:1160:5) {
+Apr 29 13:15:13 [signsuiteai]   length: 114,
+Apr 29 13:15:13 [signsuiteai]   severity: 'ERROR',
+Apr 29 13:15:13 [signsuiteai]   code: '42P01',
+Apr 29 13:15:13 [signsuiteai]   detail: undefined,
+Apr 29 13:15:13 [signsuiteai]   hint: undefined,
+Apr 29 13:15:13 [signsuiteai]   position: '16',
+Apr 29 13:15:13 [signsuiteai]   internalPosition: undefined,
+Apr 29 13:15:13 [signsuiteai]   internalQuery: undefined,
+Apr 29 13:15:13 [signsuiteai]   where: undefined,
+Apr 29 13:15:13 [signsuiteai]   schema: undefined,
+Apr 29 13:15:13 [signsuiteai]   table: undefined,
+Apr 29 13:15:13 [signsuiteai]   column: undefined,
+Apr 29 13:15:13 [signsuiteai]   dataType: undefined,
+Apr 29 13:15:13 [signsuiteai]   constraint: undefined,
+Apr 29 13:15:13 [signsuiteai]   file: 'parse_relation.c',
+Apr 29 13:15:13 [signsuiteai]   line: '1445',
+Apr 29 13:15:13 [signsuiteai]   routine: 'parserOpenTable'
+Apr 29 13:15:13 [signsuiteai] } Failed to lookup account by API key hash, falling back to API
+Apr 29 13:15:14 [signsuiteai] error: relation "stripe.accounts" does not exist
+Apr 29 13:15:14 [signsuiteai]     at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+Apr 29 13:15:14 [signsuiteai]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 13:15:14 [signsuiteai]     at async PostgresClient.upsertAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:206:5)
+Apr 29 13:15:14 [signsuiteai]     at async StripeSync.upsertAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:612:7)
+Apr 29 13:15:14 [signsuiteai]     at async StripeSync.getAccountId (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:602:5)
+Apr 29 13:15:14 [signsuiteai]     at async StripeSync.getCurrentAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:632:5)
+Apr 29 13:15:14 [signsuiteai]     at async StripeSync.syncBackfill (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:1160:5) {
+Apr 29 13:15:14 [signsuiteai]   length: 114,
+Apr 29 13:15:14 [signsuiteai]   severity: 'ERROR',
+Apr 29 13:15:14 [signsuiteai]   code: '42P01',
+Apr 29 13:15:14 [signsuiteai]   detail: undefined,
+Apr 29 13:15:14 [signsuiteai]   hint: undefined,
+Apr 29 13:15:14 [signsuiteai]   position: '13',
+Apr 29 13:15:14 [signsuiteai]   internalPosition: undefined,
+Apr 29 13:15:14 [signsuiteai]   internalQuery: undefined,
+Apr 29 13:15:14 [signsuiteai]   where: undefined,
+Apr 29 13:15:14 [signsuiteai]   schema: undefined,
+Apr 29 13:15:14 [signsuiteai]   table: undefined,
+Apr 29 13:15:14 [signsuiteai]   column: undefined,
+Apr 29 13:15:14 [signsuiteai]   dataType: undefined,
+Apr 29 13:15:14 [signsuiteai]   constraint: undefined,
+Apr 29 13:15:14 [signsuiteai]   file: 'parse_relation.c',
+Apr 29 13:15:14 [signsuiteai]   line: '1445',
+Apr 29 13:15:14 [signsuiteai]   routine: 'parserOpenTable'
+Apr 29 13:15:14 [signsuiteai] } Failed to upsert account to database
+Apr 29 13:15:14 [signsuiteai] {"level":50,"time":1777468514311,"pid":30,"hostname":"signsuiteai-6bb89dc789-zm8dw","err":{"type":"Error","message":"Failed to upsert account to database: relation \"stripe.accounts\" does not exist","stack":"Error: Failed to upsert account to database: relation \"stripe.accounts\" does not exist\n    at StripeSync.upsertAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:622:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async StripeSync.getAccountId (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:602:5)\n    at async StripeSync.getCurrentAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:632:5)\n    at async StripeSync.syncBackfill (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:1160:5)"},"msg":"Stripe backfill error"}

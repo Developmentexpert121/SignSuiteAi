@@ -1,0 +1,101 @@
+Apr 29 08:55:48  
+Apr 29 08:55:48  > workspace@0.0.0 start /workspace
+Apr 29 08:55:48  > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+Apr 29 08:55:48  
+Apr 29 08:55:49  {"level":30,"time":1777452949164,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+Apr 29 08:55:49  {"level":30,"time":1777452949167,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"─── SignSuiteIQ database bootstrap ───"}
+Apr 29 08:55:49  {"level":30,"time":1777452949167,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"Running 22 migrations…"}
+Apr 29 08:55:49  {"level":30,"time":1777452949257,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_users"}
+Apr 29 08:55:49  {"level":30,"time":1777452949264,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ users_add_company_id"}
+Apr 29 08:55:49  {"level":30,"time":1777452949267,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ users_add_archived_at"}
+Apr 29 08:55:49  {"level":30,"time":1777452949270,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ users_add_welcome_sent_at"}
+Apr 29 08:55:49  {"level":30,"time":1777452949273,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ users_add_deleted_at"}
+Apr 29 08:55:49  {"level":30,"time":1777452949276,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_business_details"}
+Apr 29 08:55:49  {"level":30,"time":1777452949279,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ business_details_add_active_plan_key"}
+Apr 29 08:55:49  {"level":30,"time":1777452949282,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ business_details_add_admin_id"}
+Apr 29 08:55:49  {"level":30,"time":1777452949298,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ users_add_company_fk"}
+Apr 29 08:55:49  {"level":30,"time":1777452949302,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_products_config"}
+Apr 29 08:55:49  {"level":30,"time":1777452949312,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ products_config_add_monthly_price"}
+Apr 29 08:55:49  {"level":30,"time":1777452949314,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ products_config_add_discount_price"}
+Apr 29 08:55:49  {"level":30,"time":1777452949316,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_plans_config"}
+Apr 29 08:55:49  {"level":30,"time":1777452949319,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ plans_config_add_products"}
+Apr 29 08:55:49  {"level":30,"time":1777452949321,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_site_content"}
+Apr 29 08:55:49  {"level":30,"time":1777452949323,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_user_app_access"}
+Apr 29 08:55:49  {"level":30,"time":1777452949326,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_user_subscriptions"}
+Apr 29 08:55:49  {"level":30,"time":1777452949328,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ idx_user_subscriptions_user"}
+Apr 29 08:55:49  {"level":30,"time":1777452949331,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ idx_user_subscriptions_customer"}
+Apr 29 08:55:49  {"level":30,"time":1777452949333,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ create_sso_codes"}
+Apr 29 08:55:49  {"level":30,"time":1777452949340,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ idx_sso_codes_user"}
+Apr 29 08:55:49  {"level":30,"time":1777452949342,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ idx_sso_codes_expires"}
+Apr 29 08:55:49  {"level":30,"time":1777452949342,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"✓ All migrations applied"}
+Apr 29 08:55:49  {"level":30,"time":1777452949343,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"Running seeds…"}
+Apr 29 08:55:49  {"level":30,"time":1777452949352,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ products_config (3 default products)"}
+Apr 29 08:55:49  {"level":30,"time":1777452949372,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ plans_config (4 default plans)"}
+Apr 29 08:55:49  {"level":30,"time":1777452949382,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ✓ site_content (4 default keys)"}
+Apr 29 08:55:49  {"level":30,"time":1777452949382,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"  ⊘ super_admin seed skipped (no SuperAdminSeed provided)"}
+Apr 29 08:55:49  {"level":30,"time":1777452949382,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"✓ All seeds applied"}
+Apr 29 08:55:49  {"level":30,"time":1777452949382,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"─── bootstrap complete ───"}
+Apr 29 08:55:49  {"level":40,"time":1777452949382,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","msg":"DATABASE_URL not set — skipping Stripe initialization"}
+Apr 29 08:55:49  {"level":30,"time":1777452949385,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","port":8080,"msg":"Server listening"}
+Apr 29 08:56:41  {"level":30,"time":1777453001942,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":1,"method":"GET","url":"/"},"res":{"statusCode":200},"responseTime":11,"msg":"request completed"}
+Apr 29 08:56:42  {"level":30,"time":1777453002659,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":3,"method":"GET","url":"/assets/index-C_raMH0x.css"},"res":{"statusCode":200},"responseTime":10,"msg":"request completed"}
+Apr 29 08:56:42  {"level":30,"time":1777453002671,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":2,"method":"GET","url":"/assets/index-fF9uiK0Q.js"},"res":{"statusCode":200},"responseTime":26,"msg":"request completed"}
+Apr 29 08:56:44  {"level":30,"time":1777453004206,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":4,"method":"GET","url":"/assets/SignSuiteIQ_v4_clean_no_icons_1776093556689-DZS5LAGq.png"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+Apr 29 08:56:44  {"level":30,"time":1777453004213,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":5,"method":"GET","url":"/assets/SignSalesIQ_Logo_nobg-CMrE9ZJv.png"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+Apr 29 08:57:00  {"level":30,"time":1777453020394,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":6,"method":"GET","url":"/models/tiny_face_detector_model.bin"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+Apr 29 08:57:00  {"level":30,"time":1777453020911,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":7,"method":"GET","url":"/models/face_landmark_68_tiny_model-weights_manifest.json"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+Apr 29 08:57:01  {"level":30,"time":1777453021599,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":8,"method":"GET","url":"/models/face_recognition_model-weights_manifest.json"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+Apr 29 08:57:01  {"level":30,"time":1777453021978,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":9,"method":"GET","url":"/models/face_recognition_model.bin"},"res":{"statusCode":200},"responseTime":59,"msg":"request completed"}
+Apr 29 09:05:54  {"level":30,"time":1777453554441,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":10,"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":59,"msg":"request completed"}
+Apr 29 09:06:42  {"level":30,"time":1777453602608,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","email":"developmentexpert121@gmail.com","msg":"Forgot-password requested for unknown email"}
+Apr 29 09:06:42  {"level":30,"time":1777453602609,"pid":30,"hostname":"signsuiteai-6bc8cdf555-p6dw4","req":{"id":11,"method":"POST","url":"/api/auth/forgot-password"},"res":{"statusCode":200},"responseTime":46,"msg":"request completed"}
+Apr 29 08:55:05  
+Apr 29 08:55:05  > workspace@0.0.0 start /workspace
+Apr 29 08:55:05  > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+Apr 29 08:55:05  
+Apr 29 08:55:06  {"level":30,"time":1777452906095,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+Apr 29 08:55:06  {"level":30,"time":1777452906100,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"─── SignSuiteIQ database bootstrap ───"}
+Apr 29 08:55:06  {"level":30,"time":1777452906100,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"Running 22 migrations…"}
+Apr 29 08:55:06  {"level":30,"time":1777452906282,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_users"}
+Apr 29 08:55:06  {"level":30,"time":1777452906298,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ users_add_company_id"}
+Apr 29 08:55:06  {"level":30,"time":1777452906301,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ users_add_archived_at"}
+Apr 29 08:55:06  {"level":30,"time":1777452906331,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ users_add_welcome_sent_at"}
+Apr 29 08:55:06  {"level":30,"time":1777452906334,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ users_add_deleted_at"}
+Apr 29 08:55:06  {"level":30,"time":1777452906360,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_business_details"}
+Apr 29 08:55:06  {"level":30,"time":1777452906366,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ business_details_add_active_plan_key"}
+Apr 29 08:55:06  {"level":30,"time":1777452906387,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ business_details_add_admin_id"}
+Apr 29 08:55:06  {"level":30,"time":1777452906421,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ users_add_company_fk"}
+Apr 29 08:55:06  {"level":30,"time":1777452906424,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_products_config"}
+Apr 29 08:55:06  {"level":30,"time":1777452906442,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ products_config_add_monthly_price"}
+Apr 29 08:55:06  {"level":30,"time":1777452906445,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ products_config_add_discount_price"}
+Apr 29 08:55:06  {"level":30,"time":1777452906447,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_plans_config"}
+Apr 29 08:55:06  {"level":30,"time":1777452906449,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ plans_config_add_products"}
+Apr 29 08:55:06  {"level":30,"time":1777452906452,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_site_content"}
+Apr 29 08:55:06  {"level":30,"time":1777452906460,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_user_app_access"}
+Apr 29 08:55:06  {"level":30,"time":1777452906472,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_user_subscriptions"}
+Apr 29 08:55:06  {"level":30,"time":1777452906475,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ idx_user_subscriptions_user"}
+Apr 29 08:55:06  {"level":30,"time":1777452906478,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ idx_user_subscriptions_customer"}
+Apr 29 08:55:06  {"level":30,"time":1777452906487,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ create_sso_codes"}
+Apr 29 08:55:06  {"level":30,"time":1777452906505,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ idx_sso_codes_user"}
+Apr 29 08:55:06  {"level":30,"time":1777452906511,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ idx_sso_codes_expires"}
+Apr 29 08:55:06  {"level":30,"time":1777452906511,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"✓ All migrations applied"}
+Apr 29 08:55:06  {"level":30,"time":1777452906511,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"Running seeds…"}
+Apr 29 08:55:06  {"level":30,"time":1777452906529,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ products_config (3 default products)"}
+Apr 29 08:55:06  {"level":30,"time":1777452906582,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ plans_config (4 default plans)"}
+Apr 29 08:55:06  {"level":30,"time":1777452906594,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ✓ site_content (4 default keys)"}
+Apr 29 08:55:06  {"level":30,"time":1777452906594,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"  ⊘ super_admin seed skipped (no SuperAdminSeed provided)"}
+Apr 29 08:55:06  {"level":30,"time":1777452906594,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"✓ All seeds applied"}
+Apr 29 08:55:06  {"level":30,"time":1777452906594,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"─── bootstrap complete ───"}
+Apr 29 08:55:06  {"level":40,"time":1777452906595,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"DATABASE_URL not set — skipping Stripe initialization"}
+Apr 29 08:55:06  {"level":30,"time":1777452906597,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","port":8080,"msg":"Server listening"}
+Apr 29 08:56:44  {"level":30,"time":1777453004197,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":1,"method":"GET","url":"/assets/InstalliQ_Logo_nobg-BaXYiafr.png"},"res":{"statusCode":200},"responseTime":17,"msg":"request completed"}
+Apr 29 08:57:00  {"level":30,"time":1777453020116,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":2,"method":"GET","url":"/models/tiny_face_detector_model-weights_manifest.json"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+Apr 29 08:57:01  {"level":30,"time":1777453021215,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":3,"method":"GET","url":"/models/face_landmark_68_tiny_model.bin"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+Apr 29 08:57:05  {"level":30,"time":1777453025330,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"Face login: no match found"}
+Apr 29 08:57:05  {"level":30,"time":1777453025332,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":4,"method":"POST","url":"/api/auth/face-login"},"res":{"statusCode":401},"responseTime":70,"msg":"request completed"}
+Apr 29 08:57:09  {"level":30,"time":1777453029816,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","msg":"Face login: no match found"}
+Apr 29 08:57:09  {"level":30,"time":1777453029817,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":5,"method":"POST","url":"/api/auth/face-login"},"res":{"statusCode":401},"responseTime":4,"msg":"request completed"}
+Apr 29 08:57:29  {"level":30,"time":1777453049459,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":6,"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":22,"msg":"request completed"}
+Apr 29 09:06:09  {"level":30,"time":1777453569118,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":7,"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":44,"msg":"request completed"}
+Apr 29 09:06:16  {"level":30,"time":1777453576061,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","email":"developmentexpert121@gmail.com","msg":"Forgot-password requested for unknown email"}
+Apr 29 09:06:16  {"level":30,"time":1777453576062,"pid":31,"hostname":"signsuiteai-6bc8cdf555-s6zs9","req":{"id":8,"method":"POST","url":"/api/auth/forgot-password"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}

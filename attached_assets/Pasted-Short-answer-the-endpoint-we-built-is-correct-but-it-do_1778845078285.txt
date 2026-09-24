@@ -1,0 +1,37 @@
+Short answer: the endpoint we built is correct, but it doesn't fix this on its own — SignSuiteIQ has to actually call it for direct login to work. Here's exactly what's happening and the three ways to fix it.
+
+What's going on for setiashivam351@gmail.com
+That account exists in SignSuiteIQ's database, but it got into SignSalesIQ in one of two ways:
+
+You signed in via SSO (the "Sign in with SignSuiteIQ" button). That flow ran /sso/callback, which auto-provisioned a row in SignSalesIQ's users table with no usable password (we store a placeholder hash like !sso_only:<random> so the row exists but cannot be matched against any real password). SSO continues to work because it never checks the password — it just trusts SignSuiteIQ's signed code.
+
+SignSuiteIQ hasn't called /api/internal/provision-user for this user yet. The endpoint we built will set the bcrypt hash from the password field in the payload — but only when SignSuiteIQ's side actually fires the request. Until their backend pushes the create/update event with the password, our DB has no idea what Admin@1234qwer is supposed to hash to.
+
+That's why SSO succeeds and direct login fails for the same credentials.
+
+The three ways to make direct login work
+Path	Who does it	Result
+Use the SignSuiteIQ button	You	Works today via SSO
+Click "Forgot Password" on signsalesiq.ai	You	Sets a local SignSalesIQ password you can use directly
+SignSuiteIQ team enables the push	Their backend dev	Every create/edit/password-reset in SignSuiteIQ admin will hit our endpoint with the plaintext password, we bcrypt-hash and store it, and the same creds work everywhere
+To verify the endpoint is ready for them
+Once your latest code is deployed to signsalesiq.ai, the SignSuiteIQ team can run this curl to test:
+
+curl -i -X POST https://www.signsalesiq.ai/api/internal/provision-user \
+  -H "Content-Type: application/json" \
+  -H "X-App-Secret: <SIGNSUITEIQ_SSO_SECRET>" \
+  -d '{
+    "external_id": <real-id>,
+    "email": "setiashivam351@gmail.com",
+    "username": "setiashivam351",
+    "name": "Shivam Setia",
+    "role": "admin",
+    "phone": null, "job_title": null, "location": null,
+    "action": "upsert",
+    "password": "Admin@1234qwer"
+  }'
+
+After that single call returns 200 {ok:true,...}, this exact account will be able to sign in directly at signsalesiq.ai with Admin@1234qwer. So the missing piece is on SignSuiteIQ's side — they need to wire their user-create / user-update / password-change handlers to fire that POST to our new endpoint.
+
+One thing to double-check on your end
+You said earlier that the code was deploying to signsalesiq.ai. Confirm the deploy that includes the /api/internal/provision-user route + the startup-migrations file is actually live, then ping the SignSuiteIQ dev to start sending events. Do you want me to add a tiny GET /api/internal/health endpoint they can hit to confirm our receiver is up before they wire the push?

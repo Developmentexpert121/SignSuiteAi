@@ -1,0 +1,79 @@
+May 05 06:16:25  
+May 05 06:16:25  > workspace@0.0.0 start /workspace
+May 05 06:16:25  > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+May 05 06:16:25  
+May 05 06:16:26  {"level":30,"time":1777961786564,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+May 05 06:16:26  {"level":30,"time":1777961786567,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"─── SignSuiteIQ database bootstrap ───"}
+May 05 06:16:26  {"level":30,"time":1777961786567,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running 31 migrations…"}
+May 05 06:16:26  {"level":30,"time":1777961786649,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_users"}
+May 05 06:16:26  {"level":30,"time":1777961786655,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_id"}
+May 05 06:16:26  {"level":30,"time":1777961786659,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_archived_at"}
+May 05 06:16:26  {"level":30,"time":1777961786662,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_welcome_sent_at"}
+May 05 06:16:26  {"level":30,"time":1777961786667,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_deleted_at"}
+May 05 06:16:26  {"level":30,"time":1777961786670,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_cascade_deleted_by"}
+May 05 06:16:26  {"level":30,"time":1777961786673,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_business_details"}
+May 05 06:16:26  {"level":30,"time":1777961786675,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_active_plan_key"}
+May 05 06:16:26  {"level":30,"time":1777961786679,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_admin_id"}
+May 05 06:16:26  {"level":30,"time":1777961786687,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_fk"}
+May 05 06:16:26  {"level":30,"time":1777961786690,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_products_config"}
+May 05 06:16:26  {"level":30,"time":1777961786693,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_monthly_price"}
+May 05 06:16:26  {"level":30,"time":1777961786695,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_discount_price"}
+May 05 06:16:26  {"level":30,"time":1777961786697,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_coming_soon"}
+May 05 06:16:26  {"level":30,"time":1777961786699,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_plans_config"}
+May 05 06:16:26  {"level":30,"time":1777961786701,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_products"}
+May 05 06:16:26  {"level":30,"time":1777961786703,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_coming_soon"}
+May 05 06:16:26  {"level":30,"time":1777961786706,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_site_content"}
+May 05 06:16:26  {"level":30,"time":1777961786708,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_app_access"}
+May 05 06:16:26  {"level":30,"time":1777961786710,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_subscriptions"}
+May 05 06:16:26  {"level":30,"time":1777961786712,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_user"}
+May 05 06:16:26  {"level":30,"time":1777961786715,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_customer"}
+May 05 06:16:26  {"level":30,"time":1777961786717,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_brand"}
+May 05 06:16:26  {"level":30,"time":1777961786719,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_last4"}
+May 05 06:16:26  {"level":30,"time":1777961786721,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_receipt_url"}
+May 05 06:16:26  {"level":30,"time":1777961786724,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_created_at"}
+May 05 06:16:26  {"level":30,"time":1777961786726,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_archived_at"}
+May 05 06:16:26  {"level":30,"time":1777961786728,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_archived_at"}
+May 05 06:16:26  {"level":30,"time":1777961786730,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_sso_codes"}
+May 05 06:16:26  {"level":30,"time":1777961786732,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_user"}
+May 05 06:16:26  {"level":30,"time":1777961786734,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_expires"}
+May 05 06:16:26  {"level":30,"time":1777961786734,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"✓ All migrations applied"}
+May 05 06:16:26  {"level":30,"time":1777961786734,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running seeds…"}
+May 05 06:16:26  {"level":30,"time":1777961786744,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config (3 default products)"}
+May 05 06:16:26  {"level":30,"time":1777961786762,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config (4 default plans)"}
+May 05 06:16:26  {"level":30,"time":1777961786770,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ site_content (4 default keys)"}
+May 05 06:16:27  {"level":50,"time":1777961786863,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","err":{"type":"DatabaseError2","message":"insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"","stack":"error: insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"\n    at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)\n    at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)\n    at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)\n    at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)\n    at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1)","length":262,"name":"error","severity":"ERROR","code":"23503","detail":"Key (company_id)=(8) is not present in table \"business_details\".","schema":"public","table":"users","constraint":"users_company_id_fkey","file":"ri_triggers.c","line":"2772","routine":"ri_ReportViolation"},"msg":"initTables: bootstrap failed — refusing to start"}
+May 05 06:16:27  node:internal/modules/run_main:123
+May 05 06:16:27      triggerUncaughtException(
+May 05 06:16:27      ^
+May 05 06:16:27  
+May 05 06:16:27  error: insert or update on table "users" violates foreign key constraint "users_company_id_fkey"
+May 05 06:16:27      at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 05 06:16:27      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 05 06:16:27      at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)
+May 05 06:16:27      at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)
+May 05 06:16:27      at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)
+May 05 06:16:27      at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)
+May 05 06:16:27      at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1) {
+May 05 06:16:27    length: 262,
+May 05 06:16:27    severity: 'ERROR',
+May 05 06:16:27    code: '23503',
+May 05 06:16:27    detail: 'Key (company_id)=(8) is not present in table "business_details".',
+May 05 06:16:27    hint: undefined,
+May 05 06:16:27    position: undefined,
+May 05 06:16:27    internalPosition: undefined,
+May 05 06:16:27    internalQuery: undefined,
+May 05 06:16:27    where: undefined,
+May 05 06:16:27    schema: 'public',
+May 05 06:16:27    table: 'users',
+May 05 06:16:27    column: undefined,
+May 05 06:16:27    dataType: undefined,
+May 05 06:16:27    constraint: 'users_company_id_fkey',
+May 05 06:16:27    file: 'ri_triggers.c',
+May 05 06:16:27    line: '2772',
+May 05 06:16:27    routine: 'ri_ReportViolation'
+May 05 06:16:27  }
+May 05 06:16:27  
+May 05 06:16:27  Node.js v22.22.2
+May 05 06:16:27   ELIFECYCLE  Command failed with exit code 1.
+May 05 06:16:54  ERROR failed health checks after 7 attempts with error Readiness probe failed: dial tcp 100.127.25.57:8080: connect: connection refused
+May 05 06:16:27  ERROR component terminated with non-zero exit code: 1,

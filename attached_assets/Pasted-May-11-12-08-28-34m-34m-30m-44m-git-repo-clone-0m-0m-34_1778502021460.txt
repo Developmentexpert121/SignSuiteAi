@@ -1,0 +1,108 @@
+May 11 12:08:28  [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+May 11 12:08:28  [34m│[0m [34m › fetching app source code[0m
+May 11 12:08:28  [34m│[0m => Selecting branch "main"
+May 11 12:08:41  [34m│[0m => Checking out commit "cca2793b5244477e2a16503955af407b3c1736f6"
+May 11 12:08:42  [34m│[0m 
+May 11 12:08:42  [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+May 11 12:08:42  [34m╰────────────────────────────────────────╼[0m
+May 11 12:08:42  
+May 11 12:08:42  [34m › configuring build-time app environment variables:[0m
+May 11 12:08:42       SMTP_USER STRIPE_PUBLISHABLE_KEY SMTP_PASS SLACK_TEST_API_KEY SMTP_FROM GOOGLE_CLIENT_ID STRIPE_SECRET_KEY SMTP_HOST VITE_GOOGLE_CLIENT_ID SESSION_SECRET STRIPE_WEBHOOK_SECRET SSO_SECRET_SIGNSALESIQ SMTP_PORT SIGNSUITEIQ_SSO_SECRET DO_DATABASE_URL
+May 11 12:08:42  
+May 11 12:08:42  [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+May 11 12:08:42  [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+May 11 12:08:44  [34m│[0m Detected the following buildpacks suitable to build your app:
+May 11 12:08:44  [34m│[0m 
+May 11 12:08:44  [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+May 11 12:08:44  [34m│[0m    heroku/nodejs                  v0.341.5  (Node.js)
+May 11 12:08:44  [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+May 11 12:08:44  [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+May 11 12:08:44  [34m╰─────────────────────────────────────────────╼[0m
+May 11 12:08:44  
+May 11 12:08:44  [34m╭────────────[34m[30m[44m build caching [0m[0m[34m───────────╼[0m
+May 11 12:08:44  [34m│[0m [34m › checking for cache from a previous build[0m
+May 11 12:08:45  [34m│[0m Timer: Analyzer started at 2026-05-11T12:08:45Z
+May 11 12:08:45  [34m│[0m Restoring metadata for "heroku/nodejs:shim" from cache
+May 11 12:08:45  [34m│[0m Timer: Analyzer ran for 585.161951ms and ended at 2026-05-11T12:08:45Z
+May 11 12:08:45  [34m│[0m Timer: Restorer started at 2026-05-11T12:08:45Z
+May 11 12:08:46  [34m│[0m Restoring data for "heroku/nodejs:shim" from cache
+May 11 12:08:53  [34m│[0m Timer: Restorer ran for 7.77340952s and ended at 2026-05-11T12:08:53Z
+May 11 12:08:53  [34m╰───────────────────────────────────────╼[0m
+May 11 12:08:53  
+May 11 12:08:53  [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+May 11 12:08:53  [34m│[0m Timer: Builder started at 2026-05-11T12:08:53Z
+May 11 12:08:53  [34m│[0m Project contains pnpm-lock.yaml, using pnpm
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m -----> Creating runtime environment
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+May 11 12:08:54  [34m│[0m        NODE_VERBOSE=false
+May 11 12:08:54  [34m│[0m        NODE_ENV=
+May 11 12:08:54  [34m│[0m        NODE_MODULES_CACHE=true
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m -----> Installing binaries
+May 11 12:08:54  [34m│[0m        engines.node (package.json):   22.x
+May 11 12:08:54  [34m│[0m        engines.npm (package.json):    unspecified (use default)
+May 11 12:08:54  [34m│[0m        engines.pnpm (package.json):   10.26.1
+May 11 12:08:54  [34m│[0m        packageManager (package.json): pnpm@10.26.1
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m         !     Multiple pnpm versions declared
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m               The package.json file indicates the target version of pnpm to install in two fields:
+May 11 12:08:54  [34m│[0m               - "packageManager": "pnpm@10.26.1"
+May 11 12:08:54  [34m│[0m               - "engines.pnpm": "10.26.1"
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m               If both fields are present, then "packageManager" will take precedence and "pnpm@10.26.1" will be installed.
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m               To ensure we install the version of pnpm you want, remove one of these fields.
+May 11 12:08:54  [34m│[0m               https://devcenter.heroku.com/articles/nodejs-support
+May 11 12:08:54  [34m│[0m        
+May 11 12:08:54  [34m│[0m        Resolving node version 22.x...
+May 11 12:08:54  [34m│[0m        Downloading and installing node 22.22.2...
+May 11 12:08:55  [34m│[0m        Validating checksum
+May 11 12:08:58  [34m│[0m        Using default npm version: 10.9.7
+May 11 12:08:58  [34m│[0m        Downloading and installing pnpm (10.26.1)
+May 11 12:09:02  [34m│[0m        Using pnpm 10.26.1
+May 11 12:09:04  [34m│[0m        
+May 11 12:09:04  [34m│[0m -----> Restoring cache
+May 11 12:09:04  [34m│[0m        - pnpm cache
+May 11 12:09:04  [34m│[0m        
+May 11 12:09:04  [34m│[0m -----> Installing dependencies
+May 11 12:09:04  [34m│[0m        Running 'pnpm install' with pnpm-lock.yaml
+May 11 12:09:10  [34m│[0m        
+May 11 12:09:10  [34m│[0m -----> Build
+May 11 12:09:11  [34m│[0m        Running build
+May 11 12:09:11  [34m│[0m        
+May 11 12:09:11  [34m│[0m        > workspace@0.0.0 build /workspace
+May 11 12:09:11  [34m│[0m        > pnpm run typecheck && pnpm -r --if-present run build
+May 11 12:09:11  [34m│[0m        
+May 11 12:09:11  [34m│[0m        
+May 11 12:09:11  [34m│[0m        > workspace@0.0.0 typecheck /workspace
+May 11 12:09:11  [34m│[0m        > pnpm run typecheck:libs && pnpm -r --filter "./artifacts/**" --filter "./scripts" --if-present run typecheck
+May 11 12:09:11  [34m│[0m        
+May 11 12:09:12  [34m│[0m        
+May 11 12:09:12  [34m│[0m        > workspace@0.0.0 typecheck:libs /workspace
+May 11 12:09:12  [34m│[0m        > tsc --build
+May 11 12:09:12  [34m│[0m        
+May 11 12:09:18  [34m│[0m        /workspace/artifacts/api-server:
+May 11 12:09:18  [34m│[0m         ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/api-server@0.0.0 typecheck: `tsc -p tsconfig.json --noEmit`
+May 11 12:09:18  [34m│[0m        Exit status 2
+May 11 12:09:18  [34m│[0m         ELIFECYCLE  Command failed with exit code 2.
+May 11 12:09:18  [34m│[0m         ELIFECYCLE  Command failed with exit code 2.
+May 11 12:09:18  [34m│[0m 
+May 11 12:09:18  [34m│[0m -----> Build failed
+May 11 12:09:18  [34m│[0m        
+May 11 12:09:18  [34m│[0m        We're sorry this build is failing! You can troubleshoot common issues here:
+May 11 12:09:18  [34m│[0m        https://devcenter.heroku.com/articles/troubleshooting-node-deploys
+May 11 12:09:18  [34m│[0m        
+May 11 12:09:18  [34m│[0m        If you're stuck, please submit a ticket so we can help:
+May 11 12:09:18  [34m│[0m        https://help.heroku.com/
+May 11 12:09:18  [34m│[0m        
+May 11 12:09:18  [34m│[0m        Love,
+May 11 12:09:18  [34m│[0m        Heroku
+May 11 12:09:18  [34m│[0m        
+May 11 12:09:18  [34m│[0m Timer: Builder ran for 25.237030769s and ended at 2026-05-11T12:09:18Z
+May 11 12:09:18  [34m│[0m [31;1mERROR: [0mfailed to build: exit status 2
+May 11 12:09:19  [34m│[0m 
+May 11 12:09:19  [34m│[0m 
+May 11 12:09:19  [34m│[0m [31m ✘ build failed[0m

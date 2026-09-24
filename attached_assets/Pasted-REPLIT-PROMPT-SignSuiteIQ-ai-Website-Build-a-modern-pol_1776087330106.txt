@@ -1,0 +1,142 @@
+REPLIT PROMPT — SignSuiteIQ.ai Website
+
+Build a modern, polished marketing website for SignSuiteIQ.ai — a SaaS platform for the sign industry comprising three AI-powered applications: InstalliQ.ai, SignSalesIQ, and SignTakeoffIQ. Users can subscribe to one app or the full suite.
+
+TECH STACK
+
+Next.js 14 (App Router)
+Tailwind CSS
+Framer Motion for animations
+shadcn/ui for UI components
+React Icons
+Deploy-ready on Replit
+
+
+BRAND & DESIGN SYSTEM
+Colors:
+
+Navy dark: #0B1E3D
+Navy mid: #1B3A6B
+Cyan accent: #29ABE2
+Light cyan: #7DD3F0
+White: #FFFFFF
+Off-white surface: #F4F8FD
+Body text: #1A1A2E
+Muted text: #64748B
+
+Typography:
+
+Font: Inter (Google Fonts)
+Headings: 500 weight, tight tracking
+Body: 400 weight, 1.7 line height
+All UI labels: uppercase, wide letter-spacing
+
+Design language:
+
+Flat, clean surfaces — no mesh gradients or noise textures
+Subtle 0.5px borders on cards
+Generous whitespace
+Sticky nav with blur backdrop
+Smooth scroll between sections
+Framer Motion fade-up animations on scroll entry for all sections and cards
+Mobile-first, fully responsive
+
+
+SITE STRUCTURE — BUILD ALL PAGES
+1. Homepage (/)
+
+Sticky nav: logo left, links center (Products, Pricing, How It Works, About), "Start Free Trial" CTA button right. Blur backdrop on scroll.
+Hero section: dark navy gradient background, large headline "One suite. Three powerful tools.", subheadline about AI-powered sign industry software, two CTAs — "Start Free Trial" (cyan filled) and "See All Products" (outlined). Animated floating graphic or abstract IQ icon mark in the background.
+Three app cards section: one card per app, each with its badge color (InstalliQ = teal, SignSalesIQ = blue, SignTakeoffIQ = amber), app name, tagline, 4 feature bullets, and "Learn more" link.
+Suite value band: dark navy background, headline "Built for sign professionals end to end", six feature pills (ADA & fire code grounded, Real-time customer comms, AI plan recognition, 47+ mock-up types, Cloud-based anywhere access, No per-seat pricing surprises).
+Pricing section: 4 plan cards — InstalliQ ($99/mo), SignSalesIQ ($99/mo), SignTakeoffIQ ($99/mo), Full Suite ($249/mo). Full Suite card highlighted with cyan border and "Best Value" badge. Each card has feature list and CTA button.
+How it works: 4-step horizontal flow — Upload plans → AI processing → Review & edit → Send to customers. Each step numbered and animated.
+Testimonial band (placeholder): 3 quote cards with dummy sign company names and roles.
+Final CTA band: navy gradient, "Ready to visualize the win?", "Start your free trial today" button.
+Footer: logo, app links, nav links, copyright.
+
+
+2. InstalliQ.ai Product Page (/installiiq)
+Hero: teal accent, headline "AI-Powered Field Proof", subheadline about installation workflow.
+Feature sections (alternating image-left / text-right layout):
+
+Built-in calendar & weather: schedule crews, check conditions before dispatch
+AI work order recognition: upload PDF/image/email, AI parses job details automatically
+Photo capture & tagging: structured before/during/after capture, AI auto-tags by sign and location
+Site survey tools: document site conditions pre-installation
+Customer communication: email or download polished field proof packages directly to clients
+
+Include a "How a job flows through InstalliQ" animated step diagram.
+Bottom CTA: "Start your free trial of InstalliQ.ai"
+
+3. SignSalesIQ Product Page (/signsalesiq)
+Hero: blue accent, headline "Close Deals Faster", subheadline about AI mock-ups in minutes not days.
+Feature sections:
+
+47+ sign type mock-ups: channel letters, monument, pylon, ADA, vehicle wraps, window graphics, blade signs, dimensional letters, LED displays, wayfinding, and more
+Real environment placement: upload building photo, AI places mock-up on the real location
+Real-time adjustments: colors, fonts, sizing — no designer needed
+Client presentation tools: branded PDF proposals, side-by-side variations, before/after toggle
+Quote-to-close workflow: built-in pricing calculator, proposal approval, e-signature
+
+Include a "Minutes to mock-up" speed comparison graphic (Traditional: 3-5 days vs SignSalesIQ: minutes).
+Bottom CTA: "Start your free trial of SignSalesIQ"
+
+4. SignTakeoffIQ Product Page (/signtakeoffiq)
+Hero: amber accent, headline "Takeoffs in Minutes, Not Hours", subheadline about AI-driven plan reading with code compliance built in.
+Feature sections:
+
+AI plan recognition: reads PDF, image, or CAD exports — identifies all sign locations automatically
+Code compliance engine: 2010 ADA Standards (Sections 216 & 703) + local fire code, jurisdiction-aware rule sets, flags missing or non-compliant locations
+Automated read count: full sign schedule by type, location, floor, and code category
+Marked-up plan output: editable plans with sign locations clearly marked and labeled
+Editable sign schedule: adjust quantities and types, auto-updating schedule, export as PDF or spreadsheet
+
+Include a before/after plan view mockup graphic showing a raw plan vs a marked-up plan.
+Bottom CTA: "Start your free trial of SignTakeoffIQ"
+
+5. Pricing Page (/pricing)
+Full pricing page with:
+
+Toggle: Monthly / Annual (annual = 2 months free)
+4 plan cards matching homepage pricing
+Feature comparison table below the cards showing all features across all plans with checkmarks
+FAQ accordion: 6 questions about billing, cancellation, team seats, data security, onboarding support, and API access
+Bottom CTA band
+
+
+6. About Page (/about)
+
+Mission statement: built by sign industry veterans who were tired of slow tools
+Three core values cards: Speed, Accuracy, Simplicity
+Team placeholder section (3 cards with initials avatars)
+"We're hiring" band
+
+
+GLOBAL COMPONENTS
+
+<Navbar /> — sticky, blur backdrop, mobile hamburger menu
+<Footer /> — full links, app names, social icons, copyright
+<AppCard /> — reusable card component used on homepage and pricing
+<FeatureRow /> — alternating image/text layout for product pages
+<CTABand /> — reusable navy gradient CTA section
+<PricingCard /> — reusable plan card with featured state
+<StepFlow /> — animated numbered step component
+
+
+ANIMATIONS (Framer Motion)
+
+All sections fade up on scroll entry (opacity: 0 → 1, y: 30 → 0, duration: 0.5)
+App cards stagger in with 0.1s delay between each
+Pricing cards lift slightly on hover (y: -4)
+Nav CTA button pulses subtly on load
+Step numbers count up on scroll entry
+
+
+COPY TONE
+
+Confident, direct, professional
+Speaks to sign industry pros — not generic SaaS language
+Headlines are short and punchy
+Feature descriptions lead with the outcome, not the feature name
+No jargon, no fluff

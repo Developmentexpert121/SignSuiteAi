@@ -1,0 +1,109 @@
+~/workspace$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (2/2), 1008 bytes | 48.00 KiB/s, done.
+From https://github.com/Shishir-Mehta/SignSuiteAi
+   84a7a97..15fe98d  dev-works  -> origin/dev-works
+~/workspace$ git checkout -B fix-lockfile origin/dev-works
+branch 'fix-lockfile' set up to track 'origin/dev-works'.
+Switched to a new branch 'fix-lockfile'
+~/workspace$ cat package.json
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "packageManager": "pnpm@10.26.1",
+  "engines": {
+    "node": "22.x",
+    "pnpm": "10.26.1"
+  },
+  "scripts": {
+    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "start": "node --enable-source-maps ./artifacts/api-server/dist/index.mjs",
+    "db:setup": "pnpm --filter @workspace/scripts run db-setup",
+    "db:migrate": "pnpm --filter @workspace/scripts run db-migrate",
+    "db:seed": "pnpm --filter @workspace/scripts run db-seed",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+  },
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
+    "stripe": "20.0.0",
+    "stripe-replit-sync": "1.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion": "2.0.3",
+      "yaml": "2.8.3"
+    }
+  }
+}
+~/workspace$ pnpm pkg delete dependencies.dotenv
+pnpm pkg delete dependencies.node-fetch
+pnpm pkg delete devDependencies.dotenv
+pnpm pkg delete devDependencies.node-fetch
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+~/workspace$ pnpm install
+v
+ WARN  Unsupported engine: wanted: {"node":"22.x"} (current: {"node":"v24.12.0","pnpm":"10.26.1"})
+Scope: all 9 workspace projects
+Lockfile is up to date, resolution step is skipped
+Already up to date
+. preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+└─ Done in 16ms
+Done in 1.3s using pnpm v10.26.1
+v: command not installed, but was located via Nix.
+package: vlang  0.4.8  Simple, fast, safe, compiled language for developing maintainable software
+Would you like to run v from Nix and add it to your project? [Yn]: yn
+~/workspace$ pnpm install
+ WARN  Unsupported engine: wanted: {"node":"22.x"} (current: {"node":"v24.12.0","pnpm":"10.26.1"})
+Scope: all 9 workspace projects
+Lockfile is up to date, resolution step is skipped
+Already up to date
+. preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+└─ Done in 16ms
+Done in 1.2s using pnpm v10.26.1
+~/workspace$ pnpm install --frozen-lockfile
+ WARN  Unsupported engine: wanted: {"node":"22.x"} (current: {"node":"v24.12.0","pnpm":"10.26.1"})
+Scope: all 9 workspace projects
+Lockfile is up to date, resolution step is skipped
+Already up to date
+. preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+└─ Done in 26ms
+Done in 1.3s using pnpm v10.26.1
+~/workspace$ git status 
+On branch fix-lockfile
+Your branch is up to date with 'origin/dev-works'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+    modified:   package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/workspace$ git push origin fix-lockfile
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'fix-lockfile' on GitHub by visiting:
+remote:      https://github.com/Shishir-Mehta/SignSuiteAi/pull/new/fix-lockfile
+remote: 
+To https://github.com/Shishir-Mehta/SignSuiteAi.git
+ * [new branch]      fix-lockfile -> fix-lockfile
+~/workspace$ 

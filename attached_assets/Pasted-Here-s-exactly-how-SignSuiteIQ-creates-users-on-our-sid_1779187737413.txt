@@ -1,0 +1,40 @@
+Here's exactly how SignSuiteIQ creates users on our side. It happens via one webhook endpoint we built: POST /api/internal/provision-user in server/routes.ts (line 796).
+
+How SignSuiteIQ calls us
+URL: POST https://installiq.ai/api/internal/provision-user
+Auth: a single header X-App-Secret: <SIGNSUITEIQ_SSO_SECRET> — shared secret that lives in env vars on both sides. Wrong/missing secret → 401 invalid app secret.
+Body: JSON with an action ("upsert" or "delete") plus the user's fields:
+Required for upsert: email, username, name, role
+Optional: phone, job_title, location, password, external_id (the user's id in SignSuiteIQ)
+SignSuiteIQ calls this whenever a user is created, updated, or removed in their portal.
+
+What the endpoint does
+Lookup first — it tries to find a matching row in our users table:
+
+Match by email (case-insensitive).
+If no email match but external_id was given, fall back to matching by signsuiteiq_user_id. That covers the case where someone changed their email in SignSuiteIQ — we update the existing row instead of inserting a duplicate that would crash on the unique index.
+For action: "delete": soft-delete by setting deleted_at = now() on the existing row (or no-op + log if there's no match). We never hard-delete from this endpoint — keeps it safe and reversible.
+
+For action: "upsert" on an existing row:
+
+Update name, role, phone, job_title, location.
+Clear deleted_at (so re-activating an archived user just works).
+Set signsuiteiq_user_id if provided.
+Only overwrite username if the new one isn't already used by a different row (collision-safe).
+If password was sent, re-hash it with bcrypt (cost 10) and update it.
+For action: "upsert" with no existing row (= brand-new user):
+
+Username collision check: if the incoming username is already taken, we append 1, 2, 3… until we find a free one (finalUsername).
+Password handling:
+If SignSuiteIQ sent a password, bcrypt-hash it and store it.
+If no password, we store a random "unusable" bcrypt hash (!unusable!<random hex>). The row exists and the user shows up everywhere in InstalliQ, but no one can password-log-in until they use Forgot Password or come in via SSO.
+Insert the row with all the fields plus signsuiteiq_user_id = external_id.
+Response & error handling
+Success → 200 { ok: true, user_id, action } (or { ok: true, ignored: true } for a delete miss).
+Validation failure → 400 with a specific message.
+Bad secret → 401.
+Anything unexpected → 500 { error: "internal error" } — deliberately generic so SignSuiteIQ retries with backoff and we don't leak DB/schema details over the wire. The real error is logged on our side as [Provision] Error: ….
+After provisioning, sign-in works two ways
+Through SignSuiteIQ SSO (the recommended path) — they land on /sso/callback, we exchange the one-time code, find the matching user by email, log them in, and grab the widget token for the app-switcher we added last session.
+Direct password login on InstalliQ — only works if SignSuiteIQ sent a real password in the provision call. Otherwise the user has to do "Forgot Password" first.
+Net effect: SignSuiteIQ is the source of truth for the user roster. Any create/update/archive over there propagates to us in real time, and our table stays in sync without anyone having to touch the InstalliQ admin UI.

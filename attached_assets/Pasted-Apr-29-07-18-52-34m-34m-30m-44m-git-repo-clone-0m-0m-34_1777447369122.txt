@@ -1,0 +1,112 @@
+Apr 29 07:18:52  [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+Apr 29 07:18:52  [34m│[0m [34m › fetching app source code[0m
+Apr 29 07:18:52  [34m│[0m => Selecting branch "main"
+Apr 29 07:19:03  [34m│[0m => Checking out commit "4f7d113a0481a7497e2375079660cb08b53d0302"
+Apr 29 07:19:03  [34m│[0m 
+Apr 29 07:19:03  [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+Apr 29 07:19:03  [34m╰────────────────────────────────────────╼[0m
+Apr 29 07:19:03  
+Apr 29 07:19:04  [34m › configuring build-time app environment variables:[0m
+Apr 29 07:19:04       GOOGLE_CLIENT_ID VITE_GOOGLE_CLIENT_ID SMTP_FROM SMTP_USER STRIPE_PUBLISHABLE_KEY SMTP_PASS SMTP_PORT DO_DATABASE_URL SMTP_HOST SSO_SECRET_SIGNSALESIQ SIGNSUITEIQ_SSO_SECRET SLACK_TEST_API_KEY SESSION_SECRET STRIPE_SECRET_KEY
+Apr 29 07:19:04  
+Apr 29 07:19:04  [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+Apr 29 07:19:04  [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+Apr 29 07:19:05  [34m│[0m Detected the following buildpacks suitable to build your app:
+Apr 29 07:19:05  [34m│[0m 
+Apr 29 07:19:05  [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+Apr 29 07:19:05  [34m│[0m    heroku/nodejs                  v0.341.5  (Node.js)
+Apr 29 07:19:05  [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+Apr 29 07:19:05  [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+Apr 29 07:19:05  [34m╰─────────────────────────────────────────────╼[0m
+Apr 29 07:19:05  
+Apr 29 07:19:05  [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+Apr 29 07:19:05  [34m│[0m [33;1mWarning: [0mno analyzed metadata found at path '/layers/analyzed.toml'
+Apr 29 07:19:05  [34m│[0m Timer: Builder started at 2026-04-29T07:19:05Z
+Apr 29 07:19:05  [34m│[0m Project contains pnpm-lock.yaml, using pnpm
+Apr 29 07:19:06  [34m│[0m        
+Apr 29 07:19:06  [34m│[0m -----> Creating runtime environment
+Apr 29 07:19:06  [34m│[0m        
+Apr 29 07:19:06  [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+Apr 29 07:19:06  [34m│[0m        NODE_VERBOSE=false
+Apr 29 07:19:06  [34m│[0m        NODE_ENV=
+Apr 29 07:19:06  [34m│[0m        NODE_MODULES_CACHE=true
+Apr 29 07:19:06  [34m│[0m        
+Apr 29 07:19:06  [34m│[0m -----> Installing binaries
+Apr 29 07:19:06  [34m│[0m        engines.node (package.json):   unspecified
+Apr 29 07:19:06  [34m│[0m        engines.npm (package.json):    unspecified (use default)
+Apr 29 07:19:06  [34m│[0m        engines.pnpm (package.json):   unspecified (use default)
+Apr 29 07:19:06  [34m│[0m        
+Apr 29 07:19:06  [34m│[0m        Resolving node version 22.x...
+Apr 29 07:19:06  [34m│[0m        Downloading and installing node 22.22.2...
+Apr 29 07:19:07  [34m│[0m        Validating checksum
+Apr 29 07:19:09  [34m│[0m        Using default npm version: 10.9.7
+Apr 29 07:19:09  [34m│[0m        Downloading and installing pnpm (latest)
+Apr 29 07:19:11  [34m│[0m        Using pnpm 10.33.2
+Apr 29 07:19:11  [34m│[0m         !     Default pnpm version used
+Apr 29 07:19:11  [34m│[0m        
+Apr 29 07:19:11  [34m│[0m               A pnpm lockfile (pnpm-lock.yaml) was detected but no specific version of pnpm was defined in package.json in either of the following fields:
+Apr 29 07:19:11  [34m│[0m               - "packageManager"
+Apr 29 07:19:11  [34m│[0m               - "engines.pnpm"
+Apr 29 07:19:11  [34m│[0m        
+Apr 29 07:19:11  [34m│[0m               Without a specific version defined, this build will use "pnpm@latest" by default. We highly recommend setting an explicit version
+Apr 29 07:19:11  [34m│[0m               of pnpm to improve the reliability of your builds.
+Apr 29 07:19:11  [34m│[0m               https://devcenter.heroku.com/articles/nodejs-support
+Apr 29 07:19:11  [34m│[0m        
+Apr 29 07:19:12  [34m│[0m        
+Apr 29 07:19:12  [34m│[0m -----> Installing dependencies
+Apr 29 07:19:12  [34m│[0m        Running 'pnpm install' with pnpm-lock.yaml
+Apr 29 07:19:19  [34m│[0m        
+Apr 29 07:19:19  [34m│[0m -----> Build
+Apr 29 07:19:19  [34m│[0m        Running build
+Apr 29 07:19:19  [34m│[0m        
+Apr 29 07:19:19  [34m│[0m        > workspace@0.0.0 build /workspace
+Apr 29 07:19:19  [34m│[0m        > pnpm run typecheck && pnpm -r --if-present run build
+Apr 29 07:19:19  [34m│[0m        
+Apr 29 07:19:20  [34m│[0m        
+Apr 29 07:19:20  [34m│[0m        > workspace@0.0.0 typecheck /workspace
+Apr 29 07:19:20  [34m│[0m        > pnpm run typecheck:libs && pnpm -r --filter "./artifacts/**" --filter "./scripts" --if-present run typecheck
+Apr 29 07:19:20  [34m│[0m        
+Apr 29 07:19:20  [34m│[0m        
+Apr 29 07:19:20  [34m│[0m        > workspace@0.0.0 typecheck:libs /workspace
+Apr 29 07:19:20  [34m│[0m        > tsc --build
+Apr 29 07:19:20  [34m│[0m        
+Apr 29 07:19:36  [34m│[0m        
+Apr 29 07:19:36  [34m│[0m -----> Caching build
+Apr 29 07:19:36  [34m│[0m        - pnpm cache
+Apr 29 07:19:36  [34m│[0m        
+Apr 29 07:19:36  [34m│[0m -----> Pruning devDependencies
+Apr 29 07:19:36  [34m│[0m        Skipping because NODE_ENV is not 'production'
+Apr 29 07:19:36  [34m│[0m        
+Apr 29 07:19:36  [34m│[0m -----> Build succeeded!
+Apr 29 07:19:36  [34m│[0m  !     This app may not specify any way to start a node process
+Apr 29 07:19:36  [34m│[0m        https://devcenter.heroku.com/articles/nodejs-support#default-web-process-type
+Apr 29 07:19:36  [34m│[0m 
+Apr 29 07:19:36  [34m│[0m Timer: Builder ran for 30.615036152s and ended at 2026-04-29T07:19:36Z
+Apr 29 07:19:36  [34m╰───────────────────────────────────╼[0m
+Apr 29 07:19:36  
+Apr 29 07:19:36  [34m╭────────────[34m[30m[44m app upload [0m[0m[34m───────────╼[0m
+Apr 29 07:19:36  [34m│[0m [34m › uploading app container image to DOCR[0m
+Apr 29 07:19:36  [34m│[0m [33;1mWarning: [0mno analyzed metadata found at path '/layers/analyzed.toml'
+Apr 29 07:19:37  [34m│[0m Timer: Exporter started at 2026-04-29T07:19:37Z
+Apr 29 07:19:37  [34m│[0m Adding layer 'heroku/nodejs:profile'
+Apr 29 07:19:52  [34m│[0m Adding 1/1 app layer(s)
+Apr 29 07:19:52  [34m│[0m Adding layer 'buildpacksio/lifecycle:launcher'
+Apr 29 07:19:52  [34m│[0m Adding layer 'buildpacksio/lifecycle:config'
+Apr 29 07:19:52  [34m│[0m Adding label 'io.buildpacks.lifecycle.metadata'
+Apr 29 07:19:52  [34m│[0m Adding label 'io.buildpacks.build.metadata'
+Apr 29 07:19:52  [34m│[0m Adding label 'io.buildpacks.project.metadata'
+Apr 29 07:19:52  [34m│[0m no default process type
+Apr 29 07:19:52  [34m│[0m Timer: Saving <image-0>... started at 2026-04-29T07:19:52Z
+Apr 29 07:20:16  [34m│[0m *** Images (sha256:0f3e620501880e97c33f35fde3702e6d5e691962c5d2b2a0b602ab8e57e438f5):
+Apr 29 07:20:16  [34m│[0m       <image-1>
+Apr 29 07:20:16  [34m│[0m Timer: Saving <image-2>... ran for 23.999000845s and ended at 2026-04-29T07:20:16Z
+Apr 29 07:20:16  [34m│[0m Timer: Exporter ran for 38.907974381s and ended at 2026-04-29T07:20:16Z
+Apr 29 07:20:16  [34m│[0m Timer: Cache started at 2026-04-29T07:20:16Z
+Apr 29 07:20:16  [34m│[0m Layer cache not found
+Apr 29 07:20:20  [34m│[0m Adding cache layer 'heroku/nodejs:shim'
+Apr 29 07:20:31  [34m│[0m Timer: Cache ran for 15.287529009s and ended at 2026-04-29T07:20:31Z
+Apr 29 07:20:31  [34m│[0m [32m ✔ uploaded app image to DOCR[0m
+Apr 29 07:20:31  [34m╰────────────────────────────────────╼[0m
+Apr 29 07:20:31  
+Apr 29 07:20:31  [32m ✔ [0m[30m[42m build complete [0m[0m
+Apr 29 07:20:31  

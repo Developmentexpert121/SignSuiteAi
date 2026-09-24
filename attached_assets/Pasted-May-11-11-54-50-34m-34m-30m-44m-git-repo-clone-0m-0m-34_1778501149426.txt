@@ -1,0 +1,92 @@
+May 11 11:54:50  [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+May 11 11:54:50  [34m│[0m [34m › fetching app source code[0m
+May 11 11:54:50  [34m│[0m => Selecting branch "main"
+May 11 11:55:04  [34m│[0m => Checking out commit "0e9fa6207ad8fe329eb88906fbb895308776cd3a"
+May 11 11:55:05  [34m│[0m 
+May 11 11:55:05  [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+May 11 11:55:05  [34m╰────────────────────────────────────────╼[0m
+May 11 11:55:05  
+May 11 11:55:05  [34m › configuring build-time app environment variables:[0m
+May 11 11:55:05       SLACK_TEST_API_KEY SSO_SECRET_SIGNSALESIQ DO_DATABASE_URL VITE_GOOGLE_CLIENT_ID SESSION_SECRET SMTP_USER GOOGLE_CLIENT_ID STRIPE_PUBLISHABLE_KEY STRIPE_SECRET_KEY SMTP_PASS STRIPE_WEBHOOK_SECRET SMTP_FROM SIGNSUITEIQ_SSO_SECRET SMTP_HOST SMTP_PORT
+May 11 11:55:05  
+May 11 11:55:06  [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+May 11 11:55:06  [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+May 11 11:55:08  [34m│[0m Detected the following buildpacks suitable to build your app:
+May 11 11:55:08  [34m│[0m 
+May 11 11:55:08  [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+May 11 11:55:08  [34m│[0m    heroku/nodejs                  v0.341.5  (Node.js)
+May 11 11:55:08  [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+May 11 11:55:08  [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+May 11 11:55:08  [34m╰─────────────────────────────────────────────╼[0m
+May 11 11:55:08  
+May 11 11:55:08  [34m╭────────────[34m[30m[44m build caching [0m[0m[34m───────────╼[0m
+May 11 11:55:08  [34m│[0m [34m › checking for cache from a previous build[0m
+May 11 11:55:08  [34m│[0m Timer: Analyzer started at 2026-05-11T11:55:08Z
+May 11 11:55:08  [34m│[0m Restoring metadata for "heroku/nodejs:shim" from cache
+May 11 11:55:08  [34m│[0m Timer: Analyzer ran for 629.259316ms and ended at 2026-05-11T11:55:08Z
+May 11 11:55:09  [34m│[0m Timer: Restorer started at 2026-05-11T11:55:09Z
+May 11 11:55:09  [34m│[0m Restoring data for "heroku/nodejs:shim" from cache
+May 11 11:55:15  [34m│[0m Timer: Restorer ran for 6.435751502s and ended at 2026-05-11T11:55:15Z
+May 11 11:55:15  [34m╰───────────────────────────────────────╼[0m
+May 11 11:55:15  
+May 11 11:55:15  [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+May 11 11:55:15  [34m│[0m Timer: Builder started at 2026-05-11T11:55:15Z
+May 11 11:55:15  [34m│[0m Project contains pnpm-lock.yaml, using pnpm
+May 11 11:55:16  [34m│[0m        
+May 11 11:55:16  [34m│[0m -----> Creating runtime environment
+May 11 11:55:16  [34m│[0m        
+May 11 11:55:16  [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+May 11 11:55:16  [34m│[0m        NODE_VERBOSE=false
+May 11 11:55:16  [34m│[0m        NODE_ENV=
+May 11 11:55:16  [34m│[0m        NODE_MODULES_CACHE=true
+May 11 11:55:16  [34m│[0m        
+May 11 11:55:16  [34m│[0m -----> Installing binaries
+May 11 11:55:16  [34m│[0m        engines.node (package.json):   unspecified
+May 11 11:55:16  [34m│[0m        engines.npm (package.json):    unspecified (use default)
+May 11 11:55:16  [34m│[0m        engines.pnpm (package.json):   unspecified (use default)
+May 11 11:55:16  [34m│[0m        
+May 11 11:55:16  [34m│[0m        Resolving node version 22.x...
+May 11 11:55:16  [34m│[0m        Downloading and installing node 22.22.2...
+May 11 11:55:17  [34m│[0m        Validating checksum
+May 11 11:55:19  [34m│[0m        Using default npm version: 10.9.7
+May 11 11:55:20  [34m│[0m        Downloading and installing pnpm (latest)
+May 11 11:55:23  [34m│[0m        Using pnpm 11.0.9
+May 11 11:55:23  [34m│[0m         !     Default pnpm version used
+May 11 11:55:23  [34m│[0m        
+May 11 11:55:23  [34m│[0m               A pnpm lockfile (pnpm-lock.yaml) was detected but no specific version of pnpm was defined in package.json in either of the following fields:
+May 11 11:55:23  [34m│[0m               - "packageManager"
+May 11 11:55:23  [34m│[0m               - "engines.pnpm"
+May 11 11:55:23  [34m│[0m        
+May 11 11:55:23  [34m│[0m               Without a specific version defined, this build will use "pnpm@latest" by default. We highly recommend setting an explicit version
+May 11 11:55:23  [34m│[0m               of pnpm to improve the reliability of your builds.
+May 11 11:55:23  [34m│[0m               https://devcenter.heroku.com/articles/nodejs-support
+May 11 11:55:23  [34m│[0m        
+May 11 11:55:25  [34m│[0m        
+May 11 11:55:25  [34m│[0m -----> Restoring cache
+May 11 11:55:25  [34m│[0m        - pnpm cache
+May 11 11:55:25  [34m│[0m        
+May 11 11:55:25  [34m│[0m -----> Installing dependencies
+May 11 11:55:25  [34m│[0m        Running 'pnpm install' with pnpm-lock.yaml
+May 11 11:55:25  [34m│[0m        Scope: all 9 workspace projects
+May 11 11:55:26  [34m│[0m        [ERR_PNPM_LOCKFILE_CONFIG_MISMATCH] Cannot proceed with the frozen installation. The current "overrides" configuration doesn't match the value found in the lockfile
+May 11 11:55:26  [34m│[0m        
+May 11 11:55:26  [34m│[0m        Update your lockfile using "pnpm install --no-frozen-lockfile"
+May 11 11:55:26  [34m│[0m 
+May 11 11:55:26  [34m│[0m -----> Build failed
+May 11 11:55:26  [34m│[0m        
+May 11 11:55:26  [34m│[0m        We're sorry this build is failing! You can troubleshoot common issues here:
+May 11 11:55:26  [34m│[0m        https://devcenter.heroku.com/articles/troubleshooting-node-deploys
+May 11 11:55:26  [34m│[0m        
+May 11 11:55:26  [34m│[0m        Some possible problems:
+May 11 11:55:26  [34m│[0m        
+May 11 11:55:26  [34m│[0m        - Node version not specified in package.json
+May 11 11:55:26  [34m│[0m          https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version
+May 11 11:55:26  [34m│[0m        
+May 11 11:55:26  [34m│[0m        Love,
+May 11 11:55:26  [34m│[0m        Heroku
+May 11 11:55:26  [34m│[0m        
+May 11 11:55:26  [34m│[0m Timer: Builder ran for 10.754360628s and ended at 2026-05-11T11:55:26Z
+May 11 11:55:26  [34m│[0m [31;1mERROR: [0mfailed to build: exit status 1
+May 11 11:55:26  [34m│[0m 
+May 11 11:55:26  [34m│[0m 
+May 11 11:55:26  [34m│[0m [31m ✘ build failed[0m

@@ -1,0 +1,4 @@
+artifacts/signsuiteiq/public/installiq_demo.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/installiq_1776252848799.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/signsuiteiq/public/signsalesiq_demo.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/signsalesiq_1776259315429.mp4 filter=lfs diff=lfs merge=lfs -text

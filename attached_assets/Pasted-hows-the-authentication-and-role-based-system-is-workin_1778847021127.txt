@@ -1,0 +1,119 @@
+hows the authentication and role based system is working , bcuz what i noticed the users are not being created when coming from the SignSuite, but it is being adding properly in installiq,
+I know there is an owner , tenant user sort of system , so i need explanation on that. So i can let Signsuite know how to call apis for actual users to be added. if a signsuite is registering an owner ,then what case and if user then what case
+
+1 minute ago
+
+8 actions
+Here's the full picture, then what's missing for your SignSuiteIQ integration to actually mirror users correctly.
+
+How SignSalesIQ models accounts
+There are two tables that together form an account:
+
+1. tenants (a.k.a. "Owner" / Organization)
+A tenant is a signage company — e.g. "FASTSIGNS of Waltham". One tenant has:
+
+Branding: name, slug, logo, address, website
+PDF customization: header/footer, banner text, primary/accent colors
+Subscription / Stripe customer link
+An active flag (deactivating a tenant blocks ALL its users from logging in)
+A required Owner Admin user
+2. users
+Every login is a row here. Each user has:
+
+A role (one of 10 values, but only 3 matter for provisioning):
+Role	Meaning
+SUPER_ADMIN	Platform-level admin. No tenant. Manages all tenants/users globally.
+ADMIN	Owner Admin — runs a single tenant. tenantId required. Can manage users within their tenant only.
+SALES (and 7 other staff roles)	Regular user — belongs to a tenant. tenantId required. Can only see their own opportunities/data.
+A tenantId (NULL for SUPER_ADMIN, required for everyone else)
+All the auth fields (email, passwordHash, signsuiteiqUserId, etc.)
+How that's enforced today
+Login at /api/auth/login → if user has a tenantId and that tenant's active=false, login is blocked.
+requireTenantAdmin middleware → only ADMIN or SUPER_ADMIN can create/edit users.
+ADMIN can only create users inside their own tenant, never SUPER_ADMINs.
+Only SUPER_ADMIN can create new tenants.
+Two existing internal endpoints that already do this correctly (for reference)
+Endpoint	What it does
+POST /api/tenants (SUPER_ADMIN only)	Creates a tenant and its first ADMIN user atomically
+POST /api/tenants/:tenantId/users (ADMIN/SUPER_ADMIN)	Creates a user under an existing tenant
+What's wrong with our current /api/internal/provision-user
+Look at what it does today:
+
+// Maps role: super_admin → SUPER_ADMIN, admin → ADMIN, user → SALES
+// Creates user with NO tenantId
+
+This is fine for SUPER_ADMINs but broken for ADMINs and regular users, because:
+
+An ADMIN row with tenantId = NULL is an admin of nothing — no company branding, no subscription, can't log in to manage anything meaningful.
+A SALES row with tenantId = NULL similarly has no company context.
+That's why "users from SignSuiteIQ aren't being created properly here" — they technically are (you'll see rows in the table), but they have no tenant and the app's whole multi-tenancy model breaks down for them.
+
+InstallIQ likely doesn't have this multi-tenant concept at all, which is why it "just works" there.
+
+What SignSuiteIQ actually needs to send
+We need the provisioning payload to include tenant info. There are two distinct events SignSuiteIQ should fire:
+
+Case A — SignSuiteIQ creates an Owner (a company + its Owner Admin)
+"I just registered a new signage company and its primary admin in SignSuiteIQ."
+
+Payload should include the tenant fields and the admin user fields together. Example:
+
+POST /api/internal/provision-user
+X-App-Secret: <secret>
+{
+  "external_id": 42,
+  "email": "owner@acme-signs.com",
+  "username": "owner",
+  "name": "Jane Doe",
+  "role": "admin",                    // ADMIN of this owner
+  "phone": null, "job_title": null, "location": null,
+  "action": "upsert",
+  "password": "TempPass1!",
+  "tenant": {                         // ← NEW
+    "external_id": 7,                 // SignSuiteIQ company id
+    "name": "Acme Signs LLC",
+    "slug": "acme-signs",             // unique, URL-safe
+    "phone": "555-0100",
+    "email": "info@acme-signs.com",
+    "address": "123 Main St",
+    "website": "https://acme-signs.com"
+  }
+}
+
+We upsert the tenant by slug (or by signsuiteiq_company_id once we add that column), then upsert the user with tenantId set to that tenant's id.
+
+Case B — SignSuiteIQ creates a regular user under an existing Owner
+"I added a new sales rep to an existing company in SignSuiteIQ."
+
+Same shape, but with role: "user" (or "sales"), and the tenant block tells us which existing company to attach them to:
+
+{
+  "external_id": 99,
+  "email": "rep@acme-signs.com",
+  "name": "Bob Rep",
+  "role": "user",
+  "action": "upsert",
+  "password": "TempPass1!",
+  "tenant": { "external_id": 7, "slug": "acme-signs" }   // existing tenant — looked up, NOT recreated
+}
+
+We look up the tenant by slug (or external_id), attach the user to it. If the tenant doesn't exist, we either reject (400 "tenant not found") or create it from the supplied fields — your call which is safer.
+
+Case C — SignSuiteIQ creates a platform-level SUPER_ADMIN
+{ "external_id": 1, "email": "platform@signsuite.io", "role": "super_admin", "action": "upsert", ... }
+
+No tenant block needed. (We already handle this fine.)
+
+What needs to change in our code
+To support the above we'd need to:
+
+Add a signsuiteiq_company_id (nullable int, unique) column to tenants so we can correlate companies bidirectionally.
+Extend /api/internal/provision-user to accept an optional tenant block, upsert the tenant by slug or signsuiteiq_company_id, then attach the user.
+For action: "delete" on a tenant-scoped event, decide if we soft-archive only the user, or also flip the tenant's active=false. (Recommended: archive only the user; tenant deletes should be a separate endpoint.)
+Reject ADMIN/SALES upserts that arrive without a tenant block, with a clear 400.
+My recommendation
+Before I go change the endpoint, two quick questions for you so I build it the right way:
+
+Should SignSuiteIQ have full control over tenant creation here, or do you prefer that tenants are still created manually inside SignSalesIQ by SUPER_ADMIN, and SignSuiteIQ only ever attaches users to tenants that already exist?
+What's the unique key for tenants from SignSuiteIQ's side — a numeric company_id, or a slug they generate? The first is more robust (numbers don't change); the second is what our DB already enforces unique.
+Once I know these two things I'll extend the endpoint and you can hand the updated spec to the SignSuiteIQ team.

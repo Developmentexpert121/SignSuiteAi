@@ -1,0 +1,354 @@
+May 05 06:13:41 [signsuiteai] [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+May 05 06:13:41 [signsuiteai] [34m│[0m [34m › fetching app source code[0m
+May 05 06:13:41 [signsuiteai] [34m│[0m => Selecting branch "dev-works"
+May 05 06:13:50 [signsuiteai] [34m│[0m => Checking out commit "63b791455eae6a183f13f03fcd98bb71eb33b5d2"
+May 05 06:13:50 [signsuiteai] [34m│[0m 
+May 05 06:13:50 [signsuiteai] [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+May 05 06:13:50 [signsuiteai] [34m╰────────────────────────────────────────╼[0m
+May 05 06:13:50 [signsuiteai] 
+May 05 06:13:51 [signsuiteai] [34m › configuring build-time app environment variables:[0m
+May 05 06:13:51 [signsuiteai]      STRIPE_SECRET_KEY SMTP_PASS SMTP_HOST SSO_SECRET_SIGNSALESIQ SLACK_TEST_API_KEY SMTP_FROM GOOGLE_CLIENT_ID DO_DATABASE_URL SIGNSUITEIQ_SSO_SECRET STRIPE_PUBLISHABLE_KEY SMTP_USER VITE_GOOGLE_CLIENT_ID SESSION_SECRET
+May 05 06:13:51 [signsuiteai] 
+May 05 06:13:51 [signsuiteai] [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+May 05 06:13:51 [signsuiteai] [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+May 05 06:13:52 [signsuiteai] [34m│[0m Detected the following buildpacks suitable to build your app:
+May 05 06:13:52 [signsuiteai] [34m│[0m 
+May 05 06:13:52 [signsuiteai] [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+May 05 06:13:52 [signsuiteai] [34m│[0m    heroku/nodejs                  v0.341.5  (Node.js)
+May 05 06:13:52 [signsuiteai] [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+May 05 06:13:52 [signsuiteai] [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+May 05 06:13:52 [signsuiteai] [34m╰─────────────────────────────────────────────╼[0m
+May 05 06:13:52 [signsuiteai] 
+May 05 06:13:52 [signsuiteai] [34m╭────────────[34m[30m[44m build caching [0m[0m[34m───────────╼[0m
+May 05 06:13:52 [signsuiteai] [34m│[0m [34m › checking for cache from a previous build[0m
+May 05 06:13:53 [signsuiteai] [34m│[0m Timer: Analyzer started at 2026-05-05T06:13:53Z
+May 05 06:13:53 [signsuiteai] [34m│[0m Restoring metadata for "heroku/nodejs:shim" from cache
+May 05 06:13:53 [signsuiteai] [34m│[0m Timer: Analyzer ran for 561.912274ms and ended at 2026-05-05T06:13:53Z
+May 05 06:13:53 [signsuiteai] [34m│[0m Timer: Restorer started at 2026-05-05T06:13:53Z
+May 05 06:13:54 [signsuiteai] [34m│[0m Restoring data for "heroku/nodejs:shim" from cache
+May 05 06:13:59 [signsuiteai] [34m│[0m Timer: Restorer ran for 5.943501439s and ended at 2026-05-05T06:13:59Z
+May 05 06:13:59 [signsuiteai] [34m╰───────────────────────────────────────╼[0m
+May 05 06:13:59 [signsuiteai] 
+May 05 06:13:59 [signsuiteai] [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+May 05 06:13:59 [signsuiteai] [34m│[0m Timer: Builder started at 2026-05-05T06:13:59Z
+May 05 06:13:59 [signsuiteai] [34m│[0m Project contains pnpm-lock.yaml, using pnpm
+May 05 06:14:00 [signsuiteai] [34m│[0m        
+May 05 06:14:00 [signsuiteai] [34m│[0m -----> Creating runtime environment
+May 05 06:14:00 [signsuiteai] [34m│[0m        
+May 05 06:14:00 [signsuiteai] [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+May 05 06:14:00 [signsuiteai] [34m│[0m        NODE_VERBOSE=false
+May 05 06:14:00 [signsuiteai] [34m│[0m        NODE_ENV=
+May 05 06:14:00 [signsuiteai] [34m│[0m        NODE_MODULES_CACHE=true
+May 05 06:14:00 [signsuiteai] [34m│[0m        
+May 05 06:14:00 [signsuiteai] [34m│[0m -----> Installing binaries
+May 05 06:14:00 [signsuiteai] [34m│[0m        engines.node (package.json):   unspecified
+May 05 06:14:00 [signsuiteai] [34m│[0m        engines.npm (package.json):    unspecified (use default)
+May 05 06:14:00 [signsuiteai] [34m│[0m        engines.pnpm (package.json):   unspecified (use default)
+May 05 06:14:00 [signsuiteai] [34m│[0m        
+May 05 06:14:00 [signsuiteai] [34m│[0m        Resolving node version 22.x...
+May 05 06:14:00 [signsuiteai] [34m│[0m        Downloading and installing node 22.22.2...
+May 05 06:14:01 [signsuiteai] [34m│[0m        Validating checksum
+May 05 06:14:03 [signsuiteai] [34m│[0m        Using default npm version: 10.9.7
+May 05 06:14:03 [signsuiteai] [34m│[0m        Downloading and installing pnpm (latest)
+May 05 06:14:06 [signsuiteai] [34m│[0m        Using pnpm 10.33.3
+May 05 06:14:06 [signsuiteai] [34m│[0m         !     Default pnpm version used
+May 05 06:14:06 [signsuiteai] [34m│[0m        
+May 05 06:14:06 [signsuiteai] [34m│[0m               A pnpm lockfile (pnpm-lock.yaml) was detected but no specific version of pnpm was defined in package.json in either of the following fields:
+May 05 06:14:06 [signsuiteai] [34m│[0m               - "packageManager"
+May 05 06:14:06 [signsuiteai] [34m│[0m               - "engines.pnpm"
+May 05 06:14:06 [signsuiteai] [34m│[0m        
+May 05 06:14:06 [signsuiteai] [34m│[0m               Without a specific version defined, this build will use "pnpm@latest" by default. We highly recommend setting an explicit version
+May 05 06:14:06 [signsuiteai] [34m│[0m               of pnpm to improve the reliability of your builds.
+May 05 06:14:06 [signsuiteai] [34m│[0m               https://devcenter.heroku.com/articles/nodejs-support
+May 05 06:14:06 [signsuiteai] [34m│[0m        
+May 05 06:14:08 [signsuiteai] [34m│[0m        
+May 05 06:14:08 [signsuiteai] [34m│[0m -----> Restoring cache
+May 05 06:14:08 [signsuiteai] [34m│[0m        - pnpm cache
+May 05 06:14:08 [signsuiteai] [34m│[0m        
+May 05 06:14:08 [signsuiteai] [34m│[0m -----> Installing dependencies
+May 05 06:14:08 [signsuiteai] [34m│[0m        Running 'pnpm install' with pnpm-lock.yaml
+May 05 06:14:13 [signsuiteai] [34m│[0m        
+May 05 06:14:13 [signsuiteai] [34m│[0m -----> Build
+May 05 06:14:13 [signsuiteai] [34m│[0m        Running build
+May 05 06:14:13 [signsuiteai] [34m│[0m        
+May 05 06:14:13 [signsuiteai] [34m│[0m        > workspace@0.0.0 build /workspace
+May 05 06:14:13 [signsuiteai] [34m│[0m        > pnpm run typecheck && pnpm -r --if-present run build
+May 05 06:14:13 [signsuiteai] [34m│[0m        
+May 05 06:14:14 [signsuiteai] [34m│[0m        
+May 05 06:14:14 [signsuiteai] [34m│[0m        > workspace@0.0.0 typecheck /workspace
+May 05 06:14:14 [signsuiteai] [34m│[0m        > pnpm run typecheck:libs && pnpm -r --filter "./artifacts/**" --filter "./scripts" --if-present run typecheck
+May 05 06:14:14 [signsuiteai] [34m│[0m        
+May 05 06:14:14 [signsuiteai] [34m│[0m        
+May 05 06:14:14 [signsuiteai] [34m│[0m        > workspace@0.0.0 typecheck:libs /workspace
+May 05 06:14:14 [signsuiteai] [34m│[0m        > tsc --build
+May 05 06:14:14 [signsuiteai] [34m│[0m        
+May 05 06:14:32 [signsuiteai] [34m│[0m        
+May 05 06:14:32 [signsuiteai] [34m│[0m -----> Caching build
+May 05 06:14:32 [signsuiteai] [34m│[0m        - pnpm cache
+May 05 06:14:32 [signsuiteai] [34m│[0m        
+May 05 06:14:32 [signsuiteai] [34m│[0m -----> Pruning devDependencies
+May 05 06:14:32 [signsuiteai] [34m│[0m        Skipping because NODE_ENV is not 'production'
+May 05 06:14:32 [signsuiteai] [34m│[0m        
+May 05 06:14:32 [signsuiteai] [34m│[0m -----> Build succeeded!
+May 05 06:14:32 [signsuiteai] [34m│[0m Timer: Builder ran for 33.036020246s and ended at 2026-05-05T06:14:32Z
+May 05 06:14:33 [signsuiteai] [34m╰───────────────────────────────────╼[0m
+May 05 06:14:33 [signsuiteai] 
+May 05 06:14:33 [signsuiteai] [34m╭────────────[34m[30m[44m app upload [0m[0m[34m───────────╼[0m
+May 05 06:14:33 [signsuiteai] [34m│[0m [34m › uploading app container image to DOCR[0m
+May 05 06:14:33 [signsuiteai] [34m│[0m Reusing layers from image <registry-uri-0>
+May 05 06:14:33 [signsuiteai] [34m│[0m Timer: Exporter started at 2026-05-05T06:14:33Z
+May 05 06:14:33 [signsuiteai] [34m│[0m Reusing layer 'heroku/nodejs:profile'
+May 05 06:14:49 [signsuiteai] [34m│[0m Adding 1/1 app layer(s)
+May 05 06:14:49 [signsuiteai] [34m│[0m Reusing layer 'buildpacksio/lifecycle:launcher'
+May 05 06:14:49 [signsuiteai] [34m│[0m Reusing layer 'buildpacksio/lifecycle:config'
+May 05 06:14:49 [signsuiteai] [34m│[0m Reusing layer 'buildpacksio/lifecycle:process-types'
+May 05 06:14:49 [signsuiteai] [34m│[0m Adding label 'io.buildpacks.lifecycle.metadata'
+May 05 06:14:49 [signsuiteai] [34m│[0m Adding label 'io.buildpacks.build.metadata'
+May 05 06:14:49 [signsuiteai] [34m│[0m Adding label 'io.buildpacks.project.metadata'
+May 05 06:14:49 [signsuiteai] [34m│[0m Setting default process type 'web'
+May 05 06:14:49 [signsuiteai] [34m│[0m Timer: Saving <image-1>... started at 2026-05-05T06:14:49Z
+May 05 06:15:05 [signsuiteai] [34m│[0m *** Images (sha256:838d4baff7ed14179a24d8bcfed2b97521e1e1be449da0fe001c895afe921a4e):
+May 05 06:15:05 [signsuiteai] [34m│[0m       <image-2>
+May 05 06:15:05 [signsuiteai] [34m│[0m Timer: Saving <image-3>... ran for 16.216891084s and ended at 2026-05-05T06:15:05Z
+May 05 06:15:05 [signsuiteai] [34m│[0m Timer: Exporter ran for 31.558224024s and ended at 2026-05-05T06:15:05Z
+May 05 06:15:05 [signsuiteai] [34m│[0m Timer: Cache started at 2026-05-05T06:15:05Z
+May 05 06:15:10 [signsuiteai] [34m│[0m Adding cache layer 'heroku/nodejs:shim'
+May 05 06:15:21 [signsuiteai] [34m│[0m Timer: Cache ran for 15.800111764s and ended at 2026-05-05T06:15:21Z
+May 05 06:15:21 [signsuiteai] [34m│[0m [32m ✔ uploaded app image to DOCR[0m
+May 05 06:15:21 [signsuiteai] [34m╰────────────────────────────────────╼[0m
+May 05 06:15:21 [signsuiteai] 
+May 05 06:15:21 [signsuiteai] [32m ✔ [0m[30m[42m build complete [0m[0m
+May 05 06:15:21 [signsuiteai] 
+May 05 06:16:02 [signsuiteai] 
+May 05 06:16:02 [signsuiteai] > workspace@0.0.0 start /workspace
+May 05 06:16:02 [signsuiteai] > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+May 05 06:16:02 [signsuiteai] 
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763681,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763683,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"─── SignSuiteIQ database bootstrap ───"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763684,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running 31 migrations…"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763782,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_users"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763785,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_id"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763788,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_archived_at"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763791,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_welcome_sent_at"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763793,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_deleted_at"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763796,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_cascade_deleted_by"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763799,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_business_details"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763802,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_active_plan_key"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763804,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_admin_id"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763818,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_fk"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763827,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_products_config"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763829,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_monthly_price"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763831,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_discount_price"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763833,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_coming_soon"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763836,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_plans_config"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763839,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_products"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763841,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_coming_soon"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763843,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_site_content"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763846,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_app_access"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763848,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_subscriptions"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763851,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_user"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763853,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_customer"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763856,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_brand"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763858,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_last4"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763860,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_receipt_url"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763864,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_created_at"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763867,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_archived_at"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763869,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_archived_at"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763871,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_sso_codes"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763875,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_user"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763878,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_expires"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763878,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"✓ All migrations applied"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763878,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running seeds…"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763888,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config (3 default products)"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763912,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config (4 default plans)"}
+May 05 06:16:03 [signsuiteai] {"level":30,"time":1777961763923,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ site_content (4 default keys)"}
+May 05 06:16:04 [signsuiteai] {"level":50,"time":1777961764035,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","err":{"type":"DatabaseError2","message":"insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"","stack":"error: insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"\n    at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)\n    at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)\n    at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)\n    at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)\n    at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1)","length":262,"name":"error","severity":"ERROR","code":"23503","detail":"Key (company_id)=(8) is not present in table \"business_details\".","schema":"public","table":"users","constraint":"users_company_id_fkey","file":"ri_triggers.c","line":"2772","routine":"ri_ReportViolation"},"msg":"initTables: bootstrap failed — refusing to start"}
+May 05 06:16:04 [signsuiteai] node:internal/modules/run_main:123
+May 05 06:16:04 [signsuiteai]     triggerUncaughtException(
+May 05 06:16:04 [signsuiteai]     ^
+May 05 06:16:04 [signsuiteai] 
+May 05 06:16:04 [signsuiteai] error: insert or update on table "users" violates foreign key constraint "users_company_id_fkey"
+May 05 06:16:04 [signsuiteai]     at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 05 06:16:04 [signsuiteai]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 05 06:16:04 [signsuiteai]     at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)
+May 05 06:16:04 [signsuiteai]     at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)
+May 05 06:16:04 [signsuiteai]     at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)
+May 05 06:16:04 [signsuiteai]     at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)
+May 05 06:16:04 [signsuiteai]     at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1) {
+May 05 06:16:04 [signsuiteai]   length: 262,
+May 05 06:16:04 [signsuiteai]   severity: 'ERROR',
+May 05 06:16:04 [signsuiteai]   code: '23503',
+May 05 06:16:04 [signsuiteai]   detail: 'Key (company_id)=(8) is not present in table "business_details".',
+May 05 06:16:04 [signsuiteai]   hint: undefined,
+May 05 06:16:04 [signsuiteai]   position: undefined,
+May 05 06:16:04 [signsuiteai]   internalPosition: undefined,
+May 05 06:16:04 [signsuiteai]   internalQuery: undefined,
+May 05 06:16:04 [signsuiteai]   where: undefined,
+May 05 06:16:04 [signsuiteai]   schema: 'public',
+May 05 06:16:04 [signsuiteai]   table: 'users',
+May 05 06:16:04 [signsuiteai]   column: undefined,
+May 05 06:16:04 [signsuiteai]   dataType: undefined,
+May 05 06:16:04 [signsuiteai]   constraint: 'users_company_id_fkey',
+May 05 06:16:04 [signsuiteai]   file: 'ri_triggers.c',
+May 05 06:16:04 [signsuiteai]   line: '2772',
+May 05 06:16:04 [signsuiteai]   routine: 'ri_ReportViolation'
+May 05 06:16:04 [signsuiteai] }
+May 05 06:16:04 [signsuiteai] 
+May 05 06:16:04 [signsuiteai] Node.js v22.22.2
+May 05 06:16:04 [signsuiteai]  ELIFECYCLE  Command failed with exit code 1.
+May 05 06:16:04 [signsuiteai] ERROR component signsuiteai exited with code: 1
+May 05 06:16:07 [signsuiteai] 
+May 05 06:16:07 [signsuiteai] > workspace@0.0.0 start /workspace
+May 05 06:16:07 [signsuiteai] > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+May 05 06:16:07 [signsuiteai] 
+May 05 06:16:07 [signsuiteai] {"level":30,"time":1777961767959,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+May 05 06:16:07 [signsuiteai] {"level":30,"time":1777961767962,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"─── SignSuiteIQ database bootstrap ───"}
+May 05 06:16:07 [signsuiteai] {"level":30,"time":1777961767962,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running 31 migrations…"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768027,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_users"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768031,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_id"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768034,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_archived_at"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768037,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_welcome_sent_at"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768040,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_deleted_at"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768043,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_cascade_deleted_by"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768045,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_business_details"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768048,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_active_plan_key"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768052,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_admin_id"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768059,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_fk"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768063,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_products_config"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768066,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_monthly_price"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768068,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_discount_price"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768071,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_coming_soon"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768073,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_plans_config"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768076,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_products"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768078,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_coming_soon"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768081,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_site_content"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768084,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_app_access"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768086,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_subscriptions"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768088,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_user"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768090,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_customer"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768092,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_brand"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768094,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_last4"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768097,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_receipt_url"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768099,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_created_at"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768101,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_archived_at"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768104,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_archived_at"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768106,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_sso_codes"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768109,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_user"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768111,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_expires"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768111,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"✓ All migrations applied"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768112,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running seeds…"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768121,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config (3 default products)"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768156,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config (4 default plans)"}
+May 05 06:16:08 [signsuiteai] {"level":30,"time":1777961768166,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ site_content (4 default keys)"}
+May 05 06:16:08 [signsuiteai] {"level":50,"time":1777961768263,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","err":{"type":"DatabaseError2","message":"insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"","stack":"error: insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"\n    at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)\n    at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)\n    at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)\n    at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)\n    at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1)","length":262,"name":"error","severity":"ERROR","code":"23503","detail":"Key (company_id)=(8) is not present in table \"business_details\".","schema":"public","table":"users","constraint":"users_company_id_fkey","file":"ri_triggers.c","line":"2772","routine":"ri_ReportViolation"},"msg":"initTables: bootstrap failed — refusing to start"}
+May 05 06:16:08 [signsuiteai] node:internal/modules/run_main:123
+May 05 06:16:08 [signsuiteai]     triggerUncaughtException(
+May 05 06:16:08 [signsuiteai]     ^
+May 05 06:16:08 [signsuiteai] 
+May 05 06:16:08 [signsuiteai] error: insert or update on table "users" violates foreign key constraint "users_company_id_fkey"
+May 05 06:16:08 [signsuiteai]     at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 05 06:16:08 [signsuiteai]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 05 06:16:08 [signsuiteai]     at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)
+May 05 06:16:08 [signsuiteai]     at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)
+May 05 06:16:08 [signsuiteai]     at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)
+May 05 06:16:08 [signsuiteai]     at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)
+May 05 06:16:08 [signsuiteai]     at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1) {
+May 05 06:16:08 [signsuiteai]   length: 262,
+May 05 06:16:08 [signsuiteai]   severity: 'ERROR',
+May 05 06:16:08 [signsuiteai]   code: '23503',
+May 05 06:16:08 [signsuiteai]   detail: 'Key (company_id)=(8) is not present in table "business_details".',
+May 05 06:16:08 [signsuiteai]   hint: undefined,
+May 05 06:16:08 [signsuiteai]   position: undefined,
+May 05 06:16:08 [signsuiteai]   internalPosition: undefined,
+May 05 06:16:08 [signsuiteai]   internalQuery: undefined,
+May 05 06:16:08 [signsuiteai]   where: undefined,
+May 05 06:16:08 [signsuiteai]   schema: 'public',
+May 05 06:16:08 [signsuiteai]   table: 'users',
+May 05 06:16:08 [signsuiteai]   column: undefined,
+May 05 06:16:08 [signsuiteai]   dataType: undefined,
+May 05 06:16:08 [signsuiteai]   constraint: 'users_company_id_fkey',
+May 05 06:16:08 [signsuiteai]   file: 'ri_triggers.c',
+May 05 06:16:08 [signsuiteai]   line: '2772',
+May 05 06:16:08 [signsuiteai]   routine: 'ri_ReportViolation'
+May 05 06:16:08 [signsuiteai] }
+May 05 06:16:08 [signsuiteai] 
+May 05 06:16:08 [signsuiteai] Node.js v22.22.2
+May 05 06:16:08 [signsuiteai]  ELIFECYCLE  Command failed with exit code 1.
+May 05 06:16:08 [signsuiteai] ERROR component signsuiteai exited with code: 1
+May 05 06:16:25 [signsuiteai] 
+May 05 06:16:25 [signsuiteai] > workspace@0.0.0 start /workspace
+May 05 06:16:25 [signsuiteai] > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+May 05 06:16:25 [signsuiteai] 
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786564,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786567,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"─── SignSuiteIQ database bootstrap ───"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786567,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running 31 migrations…"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786649,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_users"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786655,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_id"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786659,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_archived_at"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786662,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_welcome_sent_at"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786667,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_deleted_at"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786670,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_cascade_deleted_by"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786673,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_business_details"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786675,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_active_plan_key"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786679,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ business_details_add_admin_id"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786687,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ users_add_company_fk"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786690,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_products_config"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786693,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_monthly_price"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786695,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_discount_price"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786697,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config_add_coming_soon"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786699,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_plans_config"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786701,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_products"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786703,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config_add_coming_soon"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786706,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_site_content"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786708,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_app_access"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786710,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_user_subscriptions"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786712,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_user"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786715,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_customer"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786717,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_brand"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786719,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_payment_method_last4"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786721,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_receipt_url"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786724,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_created_at"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786726,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ user_subscriptions_add_archived_at"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786728,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_user_subscriptions_archived_at"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786730,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ create_sso_codes"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786732,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_user"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786734,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ idx_sso_codes_expires"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786734,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"✓ All migrations applied"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786734,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"Running seeds…"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786744,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ products_config (3 default products)"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786762,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ plans_config (4 default plans)"}
+May 05 06:16:26 [signsuiteai] {"level":30,"time":1777961786770,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","msg":"  ✓ site_content (4 default keys)"}
+May 05 06:16:27 [signsuiteai] {"level":50,"time":1777961786863,"pid":30,"hostname":"signsuiteai-66f68f8967-ffv7t","err":{"type":"DatabaseError2","message":"insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"","stack":"error: insert or update on table \"users\" violates foreign key constraint \"users_company_id_fkey\"\n    at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)\n    at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)\n    at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)\n    at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)\n    at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1)","length":262,"name":"error","severity":"ERROR","code":"23503","detail":"Key (company_id)=(8) is not present in table \"business_details\".","schema":"public","table":"users","constraint":"users_company_id_fkey","file":"ri_triggers.c","line":"2772","routine":"ri_ReportViolation"},"msg":"initTables: bootstrap failed — refusing to start"}
+May 05 06:16:27 [signsuiteai] node:internal/modules/run_main:123
+May 05 06:16:27 [signsuiteai]     triggerUncaughtException(
+May 05 06:16:27 [signsuiteai]     ^
+May 05 06:16:27 [signsuiteai] 
+May 05 06:16:27 [signsuiteai] error: insert or update on table "users" violates foreign key constraint "users_company_id_fkey"
+May 05 06:16:27 [signsuiteai]     at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 05 06:16:27 [signsuiteai]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 05 06:16:27 [signsuiteai]     at async seedSnapshotUsers (/workspace/lib/db/src/seeds.ts:286:5)
+May 05 06:16:27 [signsuiteai]     at async runSeeds (/workspace/lib/db/src/seeds.ts:352:3)
+May 05 06:16:27 [signsuiteai]     at async bootstrapDatabase (/workspace/lib/db/src/bootstrap.ts:26:3)
+May 05 06:16:27 [signsuiteai]     at async initTables (/workspace/artifacts/api-server/src/lib/initTables.ts:20:5)
+May 05 06:16:27 [signsuiteai]     at async <anonymous> (/workspace/artifacts/api-server/src/index.ts:71:1) {
+May 05 06:16:27 [signsuiteai]   length: 262,
+May 05 06:16:27 [signsuiteai]   severity: 'ERROR',
+May 05 06:16:27 [signsuiteai]   code: '23503',
+May 05 06:16:27 [signsuiteai]   detail: 'Key (company_id)=(8) is not present in table "business_details".',
+May 05 06:16:27 [signsuiteai]   hint: undefined,
+May 05 06:16:27 [signsuiteai]   position: undefined,
+May 05 06:16:27 [signsuiteai]   internalPosition: undefined,
+May 05 06:16:27 [signsuiteai]   internalQuery: undefined,
+May 05 06:16:27 [signsuiteai]   where: undefined,
+May 05 06:16:27 [signsuiteai]   schema: 'public',
+May 05 06:16:27 [signsuiteai]   table: 'users',
+May 05 06:16:27 [signsuiteai]   column: undefined,
+May 05 06:16:27 [signsuiteai]   dataType: undefined,
+May 05 06:16:27 [signsuiteai]   constraint: 'users_company_id_fkey',
+May 05 06:16:27 [signsuiteai]   file: 'ri_triggers.c',
+May 05 06:16:27 [signsuiteai]   line: '2772',
+May 05 06:16:27 [signsuiteai]   routine: 'ri_ReportViolation'
+May 05 06:16:27 [signsuiteai] }
+May 05 06:16:27 [signsuiteai] 
+May 05 06:16:27 [signsuiteai] Node.js v22.22.2
+May 05 06:16:27 [signsuiteai]  ELIFECYCLE  Command failed with exit code 1.

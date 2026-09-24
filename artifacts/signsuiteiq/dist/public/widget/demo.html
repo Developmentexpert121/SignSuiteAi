@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SignSuiteIQ App Switcher — Test Harness</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f8fafc; color: #1C2A3A; }
+    header { padding: 24px 32px; background: #1C2A3A; color: #fff; }
+    header h1 { margin: 0 0 4px; font-size: 18px; font-weight: 600; }
+    header p { margin: 0; font-size: 13px; opacity: 0.8; }
+    main { max-width: 720px; margin: 32px auto; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; }
+    main h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: #64748b; margin: 0 0 8px; font-weight: 600; }
+    main p { font-size: 14px; line-height: 1.6; margin: 0 0 12px; }
+    .step { background: #f1f5f9; border-radius: 8px; padding: 14px 16px; margin: 12px 0; font-size: 13px; }
+    label { display: block; font-size: 12px; font-weight: 600; color: #475569; margin: 12px 0 4px; text-transform: uppercase; letter-spacing: 0.1em; }
+    input { width: 100%; padding: 10px 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; border: 1px solid #cbd5e1; border-radius: 8px; }
+    button.go { margin-top: 12px; background: #E8932C; color: #fff; border: 0; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 13px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>App Switcher Widget — Test Harness</h1>
+    <p>Mimics a child app embedding the SignSuiteIQ app-switcher. Paste a widget token to render the floating grid in the top-right corner.</p>
+  </header>
+  <main>
+    <h2>1. Get a widget token</h2>
+    <p>Sign in to SignSuiteIQ, then have the API server issue you an SSO code and exchange it for a widget token:</p>
+    <div class="step"><code>POST /api/sso/issue</code> &nbsp;→&nbsp; <code>POST /api/sso/exchange</code> &nbsp;→&nbsp; copy the <code>widgetToken</code> field.</div>
+    <h2>2. Render the widget</h2>
+    <label for="t">Widget token</label>
+    <input id="t" type="text" placeholder="paste widgetToken here" autocomplete="off" />
+    <label for="b">API base (defaults to current origin)</label>
+    <input id="b" type="text" placeholder="https://signsuiteiq.ai" autocomplete="off" />
+    <button class="go" type="button" onclick="mount()">Mount widget</button>
+    <p style="margin-top: 18px; font-size: 12px; color: #64748b;">Once mounted, look for the grid icon in the top-right corner. Click it to see the apps you can launch.</p>
+  </main>
+  <script>
+    function mount() {
+      var token = document.getElementById("t").value.trim();
+      var base = document.getElementById("b").value.trim() || window.location.origin;
+      if (!token) { alert("Paste a widget token first."); return; }
+      // Reset so re-mounts work for testing
+      delete window.__SIGNSUITEIQ_APP_SWITCHER_LOADED__;
+      var existing = document.querySelectorAll('[data-signsuiteiq-app-switcher]');
+      existing.forEach(function (n) { n.remove(); });
+
+      var s = document.createElement("script");
+      s.src = "/widget/app-switcher.js?v=" + Date.now();
+      s.setAttribute("data-api-base", base);
+      s.setAttribute("data-token", token);
+      s.setAttribute("data-position", "top-right");
+      document.body.appendChild(s);
+    }
+  </script>
+</body>
+</html>

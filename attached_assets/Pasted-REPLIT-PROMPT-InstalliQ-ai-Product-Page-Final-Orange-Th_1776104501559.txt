@@ -1,0 +1,188 @@
+REPLIT PROMPT — InstalliQ.ai Product Page (Final, Orange Theme)
+
+Build the InstalliQ.ai product page as part of the SignSuiteIQ.ai website. This is a standalone page at /installiiq that matches the real InstalliQ.ai application's color theme and uses actual app screenshots as feature visuals.
+
+TECH STACK
+
+Next.js 14 (App Router)
+Tailwind CSS
+Framer Motion for scroll animations
+Inter font (Google Fonts)
+
+
+BRAND & COLOR SYSTEM — InstalliQ specific
+
+Primary orange: #F5A623
+Orange light fill: #FFF3DC
+Orange border: #F5A623
+Orange dark text: #854F0B
+Background: #FAF8F5 (warm off-white)
+Card surface: #F8F7F5
+Card border: #E8E4DE
+Dark section bg: #1A1A2E
+Body text: #1A1A2E
+Muted text: #64748B
+Success green: #1D9E75
+White: #FFFFFF
+
+Typography: Inter, heading weight 500, body weight 400, line-height 1.7. UI labels uppercase with letter-spacing 3px.
+Design: Flat, clean white cards. Warm off-white page background. No gradients or shadows. 0.5px borders on all cards. Orange as the single accent color throughout. Browser chrome mockups around all screenshot frames (red/orange/green dots + URL bar).
+
+PAGE STRUCTURE
+
+NAV
+Left: InstalliQ.ai logo (orange square icon with checkmark + "InstalliQ.ai" text with IQ in orange + "AI-Powered Field Proof" subtext)
+Center: Features, Pricing, SignSuiteIQ links
+Right: Orange "Start free trial" button
+Sticky on scroll. White background. 0.5px bottom border.
+
+HERO SECTION
+Two-column layout. Orange #F5A623 background. Left column text, right column app screenshot.
+Left:
+
+Eyebrow: "Installation management" (white, uppercase, letter-spacing)
+H1: "AI-Powered Field Proof" (white, 46px, weight 500)
+Body: "Streamline your signage installation workflow from scheduling to completion. One platform for your entire install operation."
+Two CTAs: "Watch the demo" (white button, orange text) + "Start free trial" (outlined white)
+Stats bar (white text, separated by top border): 10K+ Jobs scheduled · 500+ Active users · 50K+ Photos captured
+
+Right: Browser chrome frame showing the real InstalliQ calendar screenshot (/installiiq/screenshots/calendar.png). Frame sits flush at the bottom of the hero, appearing to rise out of it.
+
+TRUST BAND
+White background, centered, horizontal flex row:
+✓ 256-bit SSL · ✓ SOC 2 Ready · ✓ 99.9% Uptime · ✓ AI-Powered Scheduling · ✓ Role-based access control
+Checkmarks in green #1D9E75. Text in muted gray.
+
+FEATURE SECTIONS — alternating left text / right screenshot, then right text / left screenshot
+Each feature section:
+
+Left or right: copy block (eyebrow number, headline, description, bullet list with orange checkmarks)
+Opposite side: real app screenshot in browser chrome frame
+Framer Motion fade-up on scroll entry
+
+Feature 01 — Smart Install Calendar with 7-Day Weather View
+Screenshot: /installiiq/screenshots/calendar.png (full calendar view showing April 2026, weather strip, color-coded jobs)
+Copy:
+
+Eyebrow: "01 — Calendar"
+Headline: "Smart install calendar with 7-day weather view"
+Body: "Schedule with confidence. Know before you go. Live 7-day forecast embedded in every job — color-coded by status so your whole team stays aligned."
+Bullets: 7-day forecast in every job view / Color-coded status: Scheduled, Confirmed, Survey, Issues, Completed / Automatic weather alerts on high-risk install days / Full team visibility — all users, all jobs
+
+Also show the job detail modal screenshot (/installiiq/screenshots/job-detail.png) as a floating overlay card on top of the calendar screenshot, showing the embedded weather forecast (68°F, 0% rain, 17 mph wind).
+Feature 02 — AI Work Order Recognition & Calendar Auto-Fill
+Screenshot: Illustrated UI mockup (no real screenshot available) showing a parsed work order card with extracted fields (Project, Sign types, Quantity, Address) and an orange confirmation bar: "Calendar event created — Thu Apr 17, assigned to Crew A"
+Copy:
+
+Eyebrow: "02 — AI Work Orders"
+Headline: "AI work order recognition & calendar auto-fill"
+Body: "Drop in a work order — PDF, image, or forwarded email — and InstalliQ parses every detail and creates a calendar event automatically. No re-keying. No missed details."
+Bullets: Reads PDF, image, and email work order formats / Auto-fills sign types, quantities, location & notes / Calendar event ready in seconds, assign to any crew
+
+Feature 03 — Schedule & Reschedule Customer Emails
+Screenshot: Illustrated email mockup showing branded confirmation email with job date, time window, and "On My Way" note. Orange "View job details" button inside the email.
+Copy:
+
+Eyebrow: "03 — Customer Emails"
+Headline: "Automatic schedule & reschedule emails — always branded"
+Bullets: Auto confirmation on job creation / Instant reschedule notifications / Fully customizable templates with your branding
+
+Feature 04 — On My Way Button
+Screenshot: Mobile phone frame showing large orange "On My Way" button and sent confirmation: "Notification sent to Sarah M. — ETA 22 min"
+Copy:
+
+Eyebrow: "04 — On My Way"
+Headline: "One tap. Your customer knows the crew is coming."
+Bullets: One-tap notification from installer's phone / Branded alert sent to customer instantly / Includes estimated arrival time
+
+Feature 05 & 06 — Photo Capture & AI Tagging
+Screenshot: /installiiq/screenshots/photo-dashboard.png (the completed photos dashboard showing job cards with AI tag pills: Channel Letters, Exterior Signs, Window Graphics)
+Copy:
+
+Eyebrow: "05–06 — Photos & AI Tagging"
+Headline: "50 photos per project, AI-tagged at the job site"
+Body: "Structured before/during/after capture with all job info pre-filled. AI reads and tags every photo by sign type, location, and phase — before you leave the site."
+Bullets: Up to 50 photos with pre-filled job information / AI tags by sign type, location & install phase / Channel Letters, Exterior Signs, Window Graphics auto-detected / Zero manual labeling
+
+Feature 07 — Site Survey Portal
+Screenshot: /installiiq/screenshots/site-surveys.png (the site survey grid showing completed and draft surveys with red dimension annotation overlays: 58¼"W × 98¾"H, 29½"W × 66¼"H, 24×84)
+Copy:
+
+Eyebrow: "07 — Site Survey Portal"
+Headline: "Survey, annotate exact dimensions, deliver from the portal"
+Body: "Capture site dimensions and conditions before installation. Annotate photos with measurements, then email directly to the client or install manager without leaving the app."
+Bullets: Dedicated pre-install site survey workflow / Annotate photos with exact dimensions & markups / Completed and draft survey management / Email survey directly to client from the portal
+
+Feature 08 — Searchable Photo Dashboard
+Screenshot: /installiiq/screenshots/photo-dashboard.png with search bar visible at top
+Copy:
+
+Eyebrow: "08 — Photo Dashboard"
+Headline: "Every photo from every job. Found in seconds."
+Bullets: Search by tags, description, or job label / Filter by issues or no-issues / 27+ projects visible at a glance / Export for warranty claims or QC reviews
+
+Feature 09 — Customizable Email Templates
+Screenshot: Illustrated template builder UI showing email template with branding fields
+Copy:
+
+Eyebrow: "09 — Email Templates"
+Headline: "Custom email templates for every customer touchpoint"
+Bullets: Template builder for every email type / Custom branding, signatures & messaging / Consistent professional communication every time
+
+Feature 10 — Install Time Estimator
+Screenshot: Illustrated time estimator table showing sign types, crew level, hours per sign type, and orange total bar "5.5 hrs"
+Copy:
+
+Eyebrow: "10 — Install Time Estimator"
+Headline: "Estimate install time based on your actual team"
+Body: "Tell InstalliQ your crew's skill set and it calculates realistic installation time by sign type and complexity. Better estimates mean tighter schedules and more accurate quotes."
+Bullets: Calibrated to your team's skill set / Estimates by sign type, quantity & complexity / Helps build accurate quotes and daily schedules
+
+
+WORKFLOW DIAGRAM SECTION
+Dark navy #1A1A2E background. Orange accents.
+Headline: "From work order to field proof in one platform"
+5-step horizontal flow with orange numbered circles connected by orange dotted lines:
+
+Upload work order — AI parses & auto-fills the calendar event
+Schedule crew — Weather-aware calendar, customer notified automatically
+Crew on site — On My Way tap, site survey, 50-photo capture
+AI tags & organizes — Photos sorted, tagged, searchable instantly
+Send field proof — Branded report emailed to client from the portal
+
+Framer Motion: numbers count up on scroll entry, connector lines draw left to right.
+
+BOTTOM CTA SECTION
+Orange #F5A623 background.
+Headline: "Ready to run tighter installs?" (white, 32px)
+Subtext: "Watch the demo and see how sign shops are cutting admin time and impressing customers on every job."
+Two buttons: "Watch the demo" (white, orange text) + "Start free trial" (outlined white)
+
+SCREENSHOT FILES
+Place all screenshots in /public/installiiq/screenshots/. The four screenshots to use are:
+
+calendar.png — Full install calendar view, April 2026, with 7-day weather strip and color-coded jobs
+job-detail.png — Job detail modal for Anduril Boston showing weather forecast embedded (68°F, 0% rain, 17 mph)
+site-surveys.png — Site survey grid with dimension annotation overlays
+photo-dashboard.png — Completed photos dashboard with AI tag pills
+
+All screenshots should be displayed inside a browser chrome frame component (<BrowserFrame>) with red/orange/green window dots and a URL bar showing app.installiiq.ai/[page].
+
+ANIMATIONS
+
+All sections fade up on scroll (opacity 0→1, y 30→0, duration 0.5s)
+Feature rows alternate slide in from left/right
+Workflow step numbers count up on scroll entry
+Connector lines between workflow steps draw in left to right on scroll
+
+
+COMPONENTS TO BUILD
+
+<InstalliIQNav /> — sticky nav with orange theme
+<HeroSection /> — orange background, two-column, stats bar
+<TrustBand /> — white, green checkmarks
+<FeatureRow /> — alternating layout, screenshot + copy
+<BrowserFrame /> — reusable browser chrome wrapper for screenshots
+<MobileFrame /> — phone frame for On My Way feature
+<WorkflowDiagram /> — animated 5-step flow
+<CTABand /> — orange bottom CTA

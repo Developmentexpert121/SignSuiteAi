@@ -1,0 +1,171 @@
+Apr 29 13:01:24 [signsuiteai] [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+Apr 29 13:01:24 [signsuiteai] [34m│[0m [34m › fetching app source code[0m
+Apr 29 13:01:24 [signsuiteai] [34m│[0m => Selecting branch "main"
+Apr 29 13:01:34 [signsuiteai] [34m│[0m => Checking out commit "9ccb7751122525f492b5b94af90c0c80f25ecf6f"
+Apr 29 13:01:34 [signsuiteai] [34m│[0m 
+Apr 29 13:01:34 [signsuiteai] [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+Apr 29 13:01:34 [signsuiteai] [34m╰────────────────────────────────────────╼[0m
+Apr 29 13:01:34 [signsuiteai] 
+Apr 29 13:01:34 [signsuiteai] [34m › configuring build-time app environment variables:[0m
+Apr 29 13:01:34 [signsuiteai]      SESSION_SECRET GOOGLE_CLIENT_ID SLACK_TEST_API_KEY SSO_SECRET_SIGNSALESIQ DO_DATABASE_URL SMTP_PORT STRIPE_WEBHOOK_SECRET SIGNSUITEIQ_SSO_SECRET STRIPE_SECRET_KEY SMTP_HOST SMTP_USER STRIPE_PUBLISHABLE_KEY SMTP_FROM VITE_GOOGLE_CLIENT_ID SMTP_PASS
+Apr 29 13:01:34 [signsuiteai] 
+Apr 29 13:01:34 [signsuiteai] [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+Apr 29 13:01:34 [signsuiteai] [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+Apr 29 13:01:36 [signsuiteai] [34m│[0m Detected the following buildpacks suitable to build your app:
+Apr 29 13:01:36 [signsuiteai] [34m│[0m 
+Apr 29 13:01:36 [signsuiteai] [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+Apr 29 13:01:36 [signsuiteai] [34m│[0m    heroku/nodejs                  v0.341.5  (Node.js)
+Apr 29 13:01:36 [signsuiteai] [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+Apr 29 13:01:36 [signsuiteai] [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+Apr 29 13:01:36 [signsuiteai] [34m╰─────────────────────────────────────────────╼[0m
+Apr 29 13:01:36 [signsuiteai] 
+Apr 29 13:01:36 [signsuiteai] [34m╭────────────[34m[30m[44m build caching [0m[0m[34m───────────╼[0m
+Apr 29 13:01:36 [signsuiteai] [34m│[0m [34m › checking for cache from a previous build[0m
+Apr 29 13:01:36 [signsuiteai] [34m│[0m Timer: Analyzer started at 2026-04-29T13:01:36Z
+Apr 29 13:01:37 [signsuiteai] [34m│[0m Restoring metadata for "heroku/nodejs:shim" from cache
+Apr 29 13:01:37 [signsuiteai] [34m│[0m Timer: Analyzer ran for 558.84683ms and ended at 2026-04-29T13:01:37Z
+Apr 29 13:01:37 [signsuiteai] [34m│[0m Timer: Restorer started at 2026-04-29T13:01:37Z
+Apr 29 13:01:37 [signsuiteai] [34m│[0m Restoring data for "heroku/nodejs:shim" from cache
+Apr 29 13:01:43 [signsuiteai] [34m│[0m Timer: Restorer ran for 5.410364133s and ended at 2026-04-29T13:01:43Z
+Apr 29 13:01:43 [signsuiteai] [34m╰───────────────────────────────────────╼[0m
+Apr 29 13:01:43 [signsuiteai] 
+Apr 29 13:01:43 [signsuiteai] [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+Apr 29 13:01:43 [signsuiteai] [34m│[0m Timer: Builder started at 2026-04-29T13:01:43Z
+Apr 29 13:01:43 [signsuiteai] [34m│[0m Project contains pnpm-lock.yaml, using pnpm
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        
+Apr 29 13:01:43 [signsuiteai] [34m│[0m -----> Creating runtime environment
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        NODE_VERBOSE=false
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        NODE_ENV=
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        NODE_MODULES_CACHE=true
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        
+Apr 29 13:01:43 [signsuiteai] [34m│[0m -----> Installing binaries
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        engines.node (package.json):   unspecified
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        engines.npm (package.json):    unspecified (use default)
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        engines.pnpm (package.json):   unspecified (use default)
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        Resolving node version 22.x...
+Apr 29 13:01:43 [signsuiteai] [34m│[0m        Downloading and installing node 22.22.2...
+Apr 29 13:01:44 [signsuiteai] [34m│[0m        Validating checksum
+Apr 29 13:01:46 [signsuiteai] [34m│[0m        Using default npm version: 10.9.7
+Apr 29 13:01:47 [signsuiteai] [34m│[0m        Downloading and installing pnpm (latest)
+Apr 29 13:01:49 [signsuiteai] [34m│[0m        Using pnpm 10.33.2
+Apr 29 13:01:50 [signsuiteai] [34m│[0m         !     Default pnpm version used
+Apr 29 13:01:50 [signsuiteai] [34m│[0m        
+Apr 29 13:01:50 [signsuiteai] [34m│[0m               A pnpm lockfile (pnpm-lock.yaml) was detected but no specific version of pnpm was defined in package.json in either of the following fields:
+Apr 29 13:01:50 [signsuiteai] [34m│[0m               - "packageManager"
+Apr 29 13:01:50 [signsuiteai] [34m│[0m               - "engines.pnpm"
+Apr 29 13:01:50 [signsuiteai] [34m│[0m        
+Apr 29 13:01:50 [signsuiteai] [34m│[0m               Without a specific version defined, this build will use "pnpm@latest" by default. We highly recommend setting an explicit version
+Apr 29 13:01:50 [signsuiteai] [34m│[0m               of pnpm to improve the reliability of your builds.
+Apr 29 13:01:50 [signsuiteai] [34m│[0m               https://devcenter.heroku.com/articles/nodejs-support
+Apr 29 13:01:50 [signsuiteai] [34m│[0m        
+Apr 29 13:01:51 [signsuiteai] [34m│[0m        
+Apr 29 13:01:51 [signsuiteai] [34m│[0m -----> Restoring cache
+Apr 29 13:01:51 [signsuiteai] [34m│[0m        - pnpm cache
+Apr 29 13:01:51 [signsuiteai] [34m│[0m        
+Apr 29 13:01:51 [signsuiteai] [34m│[0m -----> Installing dependencies
+Apr 29 13:01:51 [signsuiteai] [34m│[0m        Running 'pnpm install' with pnpm-lock.yaml
+Apr 29 13:01:56 [signsuiteai] [34m│[0m        
+Apr 29 13:01:56 [signsuiteai] [34m│[0m -----> Build
+Apr 29 13:01:56 [signsuiteai] [34m│[0m        Running build
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        > workspace@0.0.0 build /workspace
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        > pnpm run typecheck && pnpm -r --if-present run build
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        > workspace@0.0.0 typecheck /workspace
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        > pnpm run typecheck:libs && pnpm -r --filter "./artifacts/**" --filter "./scripts" --if-present run typecheck
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        > workspace@0.0.0 typecheck:libs /workspace
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        > tsc --build
+Apr 29 13:01:57 [signsuiteai] [34m│[0m        
+Apr 29 13:02:14 [signsuiteai] [34m│[0m        
+Apr 29 13:02:14 [signsuiteai] [34m│[0m -----> Caching build
+Apr 29 13:02:14 [signsuiteai] [34m│[0m        - pnpm cache
+Apr 29 13:02:14 [signsuiteai] [34m│[0m        
+Apr 29 13:02:14 [signsuiteai] [34m│[0m -----> Pruning devDependencies
+Apr 29 13:02:14 [signsuiteai] [34m│[0m        Skipping because NODE_ENV is not 'production'
+Apr 29 13:02:14 [signsuiteai] [34m│[0m        
+Apr 29 13:02:14 [signsuiteai] [34m│[0m -----> Build succeeded!
+Apr 29 13:02:14 [signsuiteai] [34m│[0m Timer: Builder ran for 31.527563144s and ended at 2026-04-29T13:02:14Z
+Apr 29 13:02:14 [signsuiteai] [34m╰───────────────────────────────────╼[0m
+Apr 29 13:02:14 [signsuiteai] 
+Apr 29 13:02:14 [signsuiteai] [34m╭────────────[34m[30m[44m app upload [0m[0m[34m───────────╼[0m
+Apr 29 13:02:14 [signsuiteai] [34m│[0m [34m › uploading app container image to DOCR[0m
+Apr 29 13:02:15 [signsuiteai] [34m│[0m Reusing layers from image <registry-uri-0>
+Apr 29 13:02:15 [signsuiteai] [34m│[0m Timer: Exporter started at 2026-04-29T13:02:15Z
+Apr 29 13:02:15 [signsuiteai] [34m│[0m Reusing layer 'heroku/nodejs:profile'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Adding 1/1 app layer(s)
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Reusing layer 'buildpacksio/lifecycle:launcher'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Reusing layer 'buildpacksio/lifecycle:config'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Reusing layer 'buildpacksio/lifecycle:process-types'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Adding label 'io.buildpacks.lifecycle.metadata'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Adding label 'io.buildpacks.build.metadata'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Adding label 'io.buildpacks.project.metadata'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Setting default process type 'web'
+Apr 29 13:02:30 [signsuiteai] [34m│[0m Timer: Saving <image-1>... started at 2026-04-29T13:02:30Z
+Apr 29 13:02:44 [signsuiteai] [34m│[0m *** Images (sha256:2b3cf1551196a8f82a4c6a75191f8f0791673aedda21e9753c5adbdb39e5d46f):
+Apr 29 13:02:44 [signsuiteai] [34m│[0m       <image-2>
+Apr 29 13:02:44 [signsuiteai] [34m│[0m Timer: Saving <image-3>... ran for 14.365028902s and ended at 2026-04-29T13:02:44Z
+Apr 29 13:02:44 [signsuiteai] [34m│[0m Timer: Exporter ran for 29.118272117s and ended at 2026-04-29T13:02:44Z
+Apr 29 13:02:44 [signsuiteai] [34m│[0m Timer: Cache started at 2026-04-29T13:02:44Z
+Apr 29 13:02:48 [signsuiteai] [34m│[0m Adding cache layer 'heroku/nodejs:shim'
+Apr 29 13:02:59 [signsuiteai] [34m│[0m [32m ✔ uploaded app image to DOCR[0m
+Apr 29 13:02:59 [signsuiteai] [34m╰────────────────────────────────────╼[0m
+Apr 29 13:02:59 [signsuiteai] 
+Apr 29 13:02:59 [signsuiteai] [32m ✔ [0m[30m[42m build complete [0m[0m
+Apr 29 13:02:59 [signsuiteai] 
+Apr 29 13:03:51 [signsuiteai] 
+Apr 29 13:03:51 [signsuiteai] > workspace@0.0.0 start /workspace
+Apr 29 13:03:51 [signsuiteai] > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+Apr 29 13:03:51 [signsuiteai] 
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832220,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832223,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"─── SignSuiteIQ database bootstrap ───"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832223,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"Running 22 migrations…"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832308,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_users"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832312,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ users_add_company_id"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832315,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ users_add_archived_at"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832321,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ users_add_welcome_sent_at"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832324,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ users_add_deleted_at"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832327,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_business_details"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832330,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ business_details_add_active_plan_key"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832335,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ business_details_add_admin_id"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832343,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ users_add_company_fk"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832345,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_products_config"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832348,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ products_config_add_monthly_price"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832355,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ products_config_add_discount_price"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832358,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_plans_config"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832361,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ plans_config_add_products"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832363,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_site_content"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832366,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_user_app_access"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832374,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_user_subscriptions"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832377,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ idx_user_subscriptions_user"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832380,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ idx_user_subscriptions_customer"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832382,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ create_sso_codes"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832385,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ idx_sso_codes_user"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832395,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ idx_sso_codes_expires"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832395,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"✓ All migrations applied"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832395,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"Running seeds…"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832406,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ products_config (3 default products)"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832433,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ plans_config (4 default plans)"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832456,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ site_content (4 default keys)"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832584,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ users snapshot (0 inserted, 34 already existed) — 34 total"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832593,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ✓ user_subscriptions snapshot (0 inserted, 2 already existed) — 2 total"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832599,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"  ⊘ super_admin (developmentexpert121@gmail.com) already exists — skipping"}
+Apr 29 13:03:52 [signsuiteai] (node:30) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+Apr 29 13:03:52 [signsuiteai] In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+Apr 29 13:03:52 [signsuiteai] 
+Apr 29 13:03:52 [signsuiteai] To prepare for this change:
+Apr 29 13:03:52 [signsuiteai] - If you want the current behavior, explicitly use 'sslmode=verify-full'
+Apr 29 13:03:52 [signsuiteai] - If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+Apr 29 13:03:52 [signsuiteai] 
+Apr 29 13:03:52 [signsuiteai] See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+Apr 29 13:03:52 [signsuiteai] (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832599,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"✓ All seeds applied"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832599,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"─── bootstrap complete ───"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832599,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","msg":"Initializing Stripe schema..."}
+Apr 29 13:03:52 [signsuiteai] {"level":50,"time":1777467832634,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","err":{"type":"Error","message":"self-signed certificate in certificate chain","stack":"Error: self-signed certificate in certificate chain\n    at TLSSocket.onConnectSecure (node:internal/tls/wrap:1701:34)\n    at TLSSocket.emit (node:events:519:28)\n    at TLSSocket._finishInit (node:internal/tls/wrap:1099:8)\n    at ssl.onhandshakedone (node:internal/tls/wrap:885:12)","code":"SELF_SIGNED_CERT_IN_CHAIN"},"msg":"Stripe init error — server will still start"}
+Apr 29 13:03:52 [signsuiteai] {"level":30,"time":1777467832637,"pid":30,"hostname":"signsuiteai-78bc966586-h54mk","port":8080,"msg":"Server listening"}

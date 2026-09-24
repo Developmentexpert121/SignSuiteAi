@@ -1,0 +1,25 @@
+{
+  "name": "@workspace/scripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "hello": "tsx ./src/hello.ts",
+    "seed-stripe": "tsx ./src/seed-stripe.ts",
+    "db-setup": "tsx ./src/db-setup.ts",
+    "db-migrate": "tsx ./src/db-setup.ts --migrate-only",
+    "db-seed": "tsx ./src/db-setup.ts --seed-only",
+    "snapshot-users": "tsx ./src/snapshot-users.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@workspace/db": "workspace:*",
+    "pg": "^8.20.0",
+    "stripe": "^20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "^8.18.0",
+    "tsx": "catalog:"
+  }
+}

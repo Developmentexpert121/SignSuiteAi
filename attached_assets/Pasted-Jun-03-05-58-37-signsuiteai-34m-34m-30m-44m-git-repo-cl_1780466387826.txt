@@ -1,0 +1,108 @@
+Jun 03 05:58:37 [signsuiteai] [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+Jun 03 05:58:37 [signsuiteai] [34m│[0m [34m › fetching app source code[0m
+Jun 03 05:58:37 [signsuiteai] [34m│[0m => Selecting branch "dev-works"
+Jun 03 05:58:51 [signsuiteai] [34m│[0m => Checking out commit "36beeb437838284c79960f44001aab0242b56b44"
+Jun 03 05:58:52 [signsuiteai] [34m│[0m 
+Jun 03 05:58:52 [signsuiteai] [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+Jun 03 05:58:52 [signsuiteai] [34m╰────────────────────────────────────────╼[0m
+Jun 03 05:58:52 [signsuiteai] 
+Jun 03 05:58:52 [signsuiteai] [34m › configuring build-time app environment variables:[0m
+Jun 03 05:58:52 [signsuiteai]      DO_DATABASE_URL GOOGLE_CLIENT_ID STRIPE_SECRET_KEY SSO_SECRET_SIGNTAKEOFFIQ STRIPE_PUBLISHABLE_KEY SMTP_PASS SIGNSUITEIQ_SSO_SECRET SESSION_SECRET SSO_SECRET_SIGNSALESIQ SSO_SECRET_INSTALLIQ SMTP_FROM SMTP_USER SLACK_TEST_API_KEY SMTP_HOST SIGNSUITEIQ_PUBLIC_URL VITE_GOOGLE_CLIENT_ID
+Jun 03 05:58:52 [signsuiteai] 
+Jun 03 05:58:52 [signsuiteai] [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+Jun 03 05:58:52 [signsuiteai] [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+Jun 03 05:58:54 [signsuiteai] [34m│[0m Detected the following buildpacks suitable to build your app:
+Jun 03 05:58:54 [signsuiteai] [34m│[0m 
+Jun 03 05:58:54 [signsuiteai] [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+Jun 03 05:58:54 [signsuiteai] [34m│[0m    heroku/nodejs                  v0.341.5  (Node.js)
+Jun 03 05:58:54 [signsuiteai] [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+Jun 03 05:58:54 [signsuiteai] [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+Jun 03 05:58:54 [signsuiteai] [34m╰─────────────────────────────────────────────╼[0m
+Jun 03 05:58:54 [signsuiteai] 
+Jun 03 05:58:54 [signsuiteai] [34m╭────────────[34m[30m[44m build caching [0m[0m[34m───────────╼[0m
+Jun 03 05:58:54 [signsuiteai] [34m│[0m [34m › checking for cache from a previous build[0m
+Jun 03 05:58:54 [signsuiteai] [34m│[0m Timer: Analyzer started at 2026-06-03T05:58:54Z
+Jun 03 05:58:55 [signsuiteai] [34m│[0m Restoring metadata for "heroku/nodejs:shim" from cache
+Jun 03 05:58:55 [signsuiteai] [34m│[0m Timer: Analyzer ran for 530.709479ms and ended at 2026-06-03T05:58:55Z
+Jun 03 05:58:55 [signsuiteai] [34m│[0m Timer: Restorer started at 2026-06-03T05:58:55Z
+Jun 03 05:58:55 [signsuiteai] [34m│[0m Restoring data for "heroku/nodejs:shim" from cache
+Jun 03 05:59:01 [signsuiteai] [34m│[0m Timer: Restorer ran for 6.663512903s and ended at 2026-06-03T05:59:01Z
+Jun 03 05:59:01 [signsuiteai] [34m╰───────────────────────────────────────╼[0m
+Jun 03 05:59:01 [signsuiteai] 
+Jun 03 05:59:01 [signsuiteai] [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+Jun 03 05:59:01 [signsuiteai] [34m│[0m Timer: Builder started at 2026-06-03T05:59:01Z
+Jun 03 05:59:02 [signsuiteai] [34m│[0m Project contains pnpm-lock.yaml, using pnpm
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m -----> Creating runtime environment
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        NODE_VERBOSE=false
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        NODE_ENV=
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        NODE_MODULES_CACHE=true
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m -----> Installing binaries
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        engines.node (package.json):   22.x
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        engines.npm (package.json):    unspecified (use default)
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        engines.pnpm (package.json):   10.26.1
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        packageManager (package.json): pnpm@10.26.1
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m         !     Multiple pnpm versions declared
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m               The package.json file indicates the target version of pnpm to install in two fields:
+Jun 03 05:59:02 [signsuiteai] [34m│[0m               - "packageManager": "pnpm@10.26.1"
+Jun 03 05:59:02 [signsuiteai] [34m│[0m               - "engines.pnpm": "10.26.1"
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m               If both fields are present, then "packageManager" will take precedence and "pnpm@10.26.1" will be installed.
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m               To ensure we install the version of pnpm you want, remove one of these fields.
+Jun 03 05:59:02 [signsuiteai] [34m│[0m               https://devcenter.heroku.com/articles/nodejs-support
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        
+Jun 03 05:59:02 [signsuiteai] [34m│[0m        Resolving node version 22.x...
+Jun 03 05:59:03 [signsuiteai] [34m│[0m        Downloading and installing node 22.22.2...
+Jun 03 05:59:03 [signsuiteai] [34m│[0m        Validating checksum
+Jun 03 05:59:06 [signsuiteai] [34m│[0m        Using default npm version: 10.9.7
+Jun 03 05:59:06 [signsuiteai] [34m│[0m        Downloading and installing pnpm (10.26.1)
+Jun 03 05:59:10 [signsuiteai] [34m│[0m        Using pnpm 10.26.1
+Jun 03 05:59:11 [signsuiteai] [34m│[0m        
+Jun 03 05:59:11 [signsuiteai] [34m│[0m -----> Restoring cache
+Jun 03 05:59:11 [signsuiteai] [34m│[0m        - pnpm cache
+Jun 03 05:59:11 [signsuiteai] [34m│[0m        
+Jun 03 05:59:11 [signsuiteai] [34m│[0m -----> Installing dependencies
+Jun 03 05:59:12 [signsuiteai] [34m│[0m        Running 'pnpm install' with pnpm-lock.yaml
+Jun 03 05:59:18 [signsuiteai] [34m│[0m        
+Jun 03 05:59:18 [signsuiteai] [34m│[0m -----> Build
+Jun 03 05:59:18 [signsuiteai] [34m│[0m        Running build
+Jun 03 05:59:18 [signsuiteai] [34m│[0m        
+Jun 03 05:59:18 [signsuiteai] [34m│[0m        > workspace@0.0.0 build /workspace
+Jun 03 05:59:18 [signsuiteai] [34m│[0m        > pnpm run typecheck && pnpm -r --if-present run build
+Jun 03 05:59:18 [signsuiteai] [34m│[0m        
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        > workspace@0.0.0 typecheck /workspace
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        > pnpm run typecheck:libs && pnpm -r --filter "./artifacts/**" --filter "./scripts" --if-present run typecheck
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        > workspace@0.0.0 typecheck:libs /workspace
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        > tsc --build
+Jun 03 05:59:19 [signsuiteai] [34m│[0m        
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        /workspace/scripts:
+Jun 03 05:59:25 [signsuiteai] [34m│[0m         ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/scripts@0.0.0 typecheck: `tsc -p tsconfig.json --noEmit`
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        Exit status 2
+Jun 03 05:59:25 [signsuiteai] [34m│[0m         ELIFECYCLE  Command failed with exit code 2.
+Jun 03 05:59:25 [signsuiteai] [34m│[0m         ELIFECYCLE  Command failed with exit code 2.
+Jun 03 05:59:25 [signsuiteai] [34m│[0m 
+Jun 03 05:59:25 [signsuiteai] [34m│[0m -----> Build failed
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        We're sorry this build is failing! You can troubleshoot common issues here:
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        https://devcenter.heroku.com/articles/troubleshooting-node-deploys
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        If you're stuck, please submit a ticket so we can help:
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        https://help.heroku.com/
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        Love,
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        Heroku
+Jun 03 05:59:25 [signsuiteai] [34m│[0m        
+Jun 03 05:59:25 [signsuiteai] [34m│[0m Timer: Builder ran for 23.300830593s and ended at 2026-06-03T05:59:25Z
+Jun 03 05:59:25 [signsuiteai] [34m│[0m [31;1mERROR: [0mfailed to build: exit status 2
+Jun 03 05:59:25 [signsuiteai] [34m│[0m 
+Jun 03 05:59:25 [signsuiteai] [34m│[0m 
+Jun 03 05:59:25 [signsuiteai] [34m│[0m [31m ✘ build failed[0m

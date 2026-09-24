@@ -1,0 +1,317 @@
+May 14 10:59:01  
+May 14 10:59:01  > workspace@0.0.0 start /workspace
+May 14 10:59:01  > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+May 14 10:59:01  
+May 14 10:59:02  {"level":30,"time":1778756342655,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+May 14 10:59:02  {"level":30,"time":1778756342659,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"─── SignSuiteIQ database bootstrap ───"}
+May 14 10:59:02  {"level":30,"time":1778756342659,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"Running 32 migrations…"}
+May 14 10:59:02  {"level":30,"time":1778756342761,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_users"}
+May 14 10:59:02  {"level":30,"time":1778756342764,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ users_add_company_id"}
+May 14 10:59:02  {"level":30,"time":1778756342767,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ users_add_archived_at"}
+May 14 10:59:02  {"level":30,"time":1778756342771,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ users_add_welcome_sent_at"}
+May 14 10:59:02  {"level":30,"time":1778756342776,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ users_add_deleted_at"}
+May 14 10:59:02  {"level":30,"time":1778756342781,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ users_add_cascade_deleted_by"}
+May 14 10:59:02  {"level":30,"time":1778756342784,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_business_details"}
+May 14 10:59:02  {"level":30,"time":1778756342788,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ business_details_add_active_plan_key"}
+May 14 10:59:02  {"level":30,"time":1778756342792,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ business_details_add_admin_id"}
+May 14 10:59:02  {"level":30,"time":1778756342807,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ users_add_company_fk"}
+May 14 10:59:02  {"level":30,"time":1778756342810,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_products_config"}
+May 14 10:59:02  {"level":30,"time":1778756342813,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ products_config_add_monthly_price"}
+May 14 10:59:02  {"level":30,"time":1778756342816,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ products_config_add_discount_price"}
+May 14 10:59:02  {"level":30,"time":1778756342818,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ products_config_add_coming_soon"}
+May 14 10:59:02  {"level":30,"time":1778756342820,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_plans_config"}
+May 14 10:59:02  {"level":30,"time":1778756342823,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ plans_config_add_products"}
+May 14 10:59:02  {"level":30,"time":1778756342826,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ plans_config_add_coming_soon"}
+May 14 10:59:02  {"level":30,"time":1778756342829,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_site_content"}
+May 14 10:59:02  {"level":30,"time":1778756342831,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_user_app_access"}
+May 14 10:59:02  {"level":30,"time":1778756342834,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_user_subscriptions"}
+May 14 10:59:02  {"level":30,"time":1778756342837,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ idx_user_subscriptions_user"}
+May 14 10:59:02  {"level":30,"time":1778756342839,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ idx_user_subscriptions_customer"}
+May 14 10:59:02  {"level":30,"time":1778756342843,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ user_subscriptions_add_payment_method_brand"}
+May 14 10:59:02  {"level":30,"time":1778756342845,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ user_subscriptions_add_payment_method_last4"}
+May 14 10:59:02  {"level":30,"time":1778756342847,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ user_subscriptions_add_receipt_url"}
+May 14 10:59:02  {"level":30,"time":1778756342850,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ idx_user_subscriptions_created_at"}
+May 14 10:59:02  {"level":30,"time":1778756342852,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ user_subscriptions_add_archived_at"}
+May 14 10:59:02  {"level":30,"time":1778756342854,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ idx_user_subscriptions_archived_at"}
+May 14 10:59:02  {"level":30,"time":1778756342856,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ create_sso_codes"}
+May 14 10:59:02  {"level":30,"time":1778756342858,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ idx_sso_codes_user"}
+May 14 10:59:02  {"level":30,"time":1778756342861,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ idx_sso_codes_expires"}
+May 14 10:59:02  {"level":30,"time":1778756342863,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ products_config_page_content"}
+May 14 10:59:02  {"level":30,"time":1778756342863,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"✓ All migrations applied"}
+May 14 10:59:02  {"level":30,"time":1778756342863,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"Running seeds…"}
+May 14 10:59:02  {"level":30,"time":1778756342872,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ products_config (3 default products)"}
+May 14 10:59:02  {"level":30,"time":1778756342891,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ plans_config (4 default plans)"}
+May 14 10:59:02  {"level":30,"time":1778756342901,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ site_content (4 default keys)"}
+May 14 10:59:02  {"level":30,"time":1778756342935,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ business_details snapshot (0 inserted, 11 already existed) — 11 total"}
+May 14 10:59:03  {"level":30,"time":1778756343103,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ users snapshot (0 inserted, 44 already existed) — 44 total"}
+May 14 10:59:03  {"level":30,"time":1778756343141,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ✓ user_subscriptions snapshot (0 inserted, 5 already existed) — 5 total"}
+May 14 10:59:03  {"level":30,"time":1778756343144,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"  ⊘ super_admin (developmentexpert121@gmail.com) already exists — skipping"}
+May 14 10:59:03  {"level":30,"time":1778756343144,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"✓ All seeds applied"}
+May 14 10:59:03  {"level":30,"time":1778756343144,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"─── bootstrap complete ───"}
+May 14 10:59:03  {"level":30,"time":1778756343145,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"Initializing Stripe schema..."}
+May 14 10:59:03  {"level":30,"time":1778756343235,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"Stripe schema ready"}
+May 14 10:59:03  { autoExpandLists: undefined, stripeApiVersion: undefined } StripeSync initialized
+May 14 10:59:03  {"level":30,"time":1778756343246,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","port":8080,"msg":"Server listening"}
+May 14 10:59:03  error: relation "stripe.accounts" does not exist
+May 14 10:59:03      at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 14 10:59:03      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 14 10:59:03      at async PostgresClient.getAccountIdByApiKeyHash (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:239:20)
+May 14 10:59:03      at async StripeSync.getAccountId (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:583:25)
+May 14 10:59:03      at async StripeSync.getCurrentAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:632:5)
+May 14 10:59:03      at async StripeSync.syncBackfill (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:1160:5) {
+May 14 10:59:03    length: 114,
+May 14 10:59:03    severity: 'ERROR',
+May 14 10:59:03    code: '42P01',
+May 14 10:59:03    detail: undefined,
+May 14 10:59:03    hint: undefined,
+May 14 10:59:03    position: '16',
+May 14 10:59:03    internalPosition: undefined,
+May 14 10:59:03    internalQuery: undefined,
+May 14 10:59:03    where: undefined,
+May 14 10:59:03    schema: undefined,
+May 14 10:59:03    table: undefined,
+May 14 10:59:03    column: undefined,
+May 14 10:59:03    dataType: undefined,
+May 14 10:59:03    constraint: undefined,
+May 14 10:59:03    file: 'parse_relation.c',
+May 14 10:59:03    line: '1445',
+May 14 10:59:03    routine: 'parserOpenTable'
+May 14 10:59:03  } Failed to lookup account by API key hash, falling back to API
+May 14 10:59:04  error: relation "stripe.accounts" does not exist
+May 14 10:59:04      at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 14 10:59:04      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 14 10:59:04      at async PostgresClient.upsertAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:206:5)
+May 14 10:59:04      at async StripeSync.upsertAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:612:7)
+May 14 10:59:04      at async StripeSync.getAccountId (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:602:5)
+May 14 10:59:04      at async StripeSync.getCurrentAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:632:5)
+May 14 10:59:04      at async StripeSync.syncBackfill (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:1160:5) {
+May 14 10:59:04    length: 114,
+May 14 10:59:04    severity: 'ERROR',
+May 14 10:59:04    code: '42P01',
+May 14 10:59:04    detail: undefined,
+May 14 10:59:04    hint: undefined,
+May 14 10:59:04    position: '13',
+May 14 10:59:04    internalPosition: undefined,
+May 14 10:59:04    internalQuery: undefined,
+May 14 10:59:04    where: undefined,
+May 14 10:59:04    schema: undefined,
+May 14 10:59:04    table: undefined,
+May 14 10:59:04    column: undefined,
+May 14 10:59:04    dataType: undefined,
+May 14 10:59:04    constraint: undefined,
+May 14 10:59:04    file: 'parse_relation.c',
+May 14 10:59:04    line: '1445',
+May 14 10:59:04    routine: 'parserOpenTable'
+May 14 10:59:04  } Failed to upsert account to database
+May 14 10:59:04  {"level":40,"time":1778756344219,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","msg":"Stripe backfill skipped: stripe-replit-sync tables not present in this database (non-blocking)"}
+May 14 10:59:38  {"level":30,"time":1778756378197,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":1,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":14,"msg":"request completed"}
+May 14 10:59:39  {"level":30,"time":1778756379355,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":2,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":138,"msg":"request completed"}
+May 14 10:59:39  {"level":30,"time":1778756379641,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":3,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":10,"msg":"request completed"}
+May 14 10:59:40  {"level":30,"time":1778756380247,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":4,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:41  {"level":30,"time":1778756381025,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":5,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:41  {"level":30,"time":1778756381322,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":6,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":13,"msg":"request completed"}
+May 14 10:59:41  {"level":30,"time":1778756381394,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":7,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 10:59:41  {"level":30,"time":1778756381784,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":8,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 10:59:42  {"level":30,"time":1778756382031,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":9,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":16,"msg":"request completed"}
+May 14 10:59:42  {"level":30,"time":1778756382042,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":10,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:42  {"level":30,"time":1778756382409,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":11,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:42  {"level":30,"time":1778756382512,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":12,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:42  {"level":30,"time":1778756382574,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":13,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:42  {"level":30,"time":1778756382576,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":14,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:42  {"level":30,"time":1778756382822,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":15,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:43  {"level":30,"time":1778756383633,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":16,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:43  {"level":30,"time":1778756383925,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":17,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":12,"msg":"request completed"}
+May 14 10:59:44  {"level":30,"time":1778756384043,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":18,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:44  {"level":30,"time":1778756384291,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":19,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":13,"msg":"request completed"}
+May 14 10:59:44  {"level":30,"time":1778756384443,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":20,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:44  {"level":30,"time":1778756384881,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":21,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385137,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":22,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":13,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385276,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":23,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385716,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":24,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385920,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":25,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:46  {"level":30,"time":1778756386120,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":26,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:46  {"level":30,"time":1778756386544,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":27,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:46  {"level":30,"time":1778756386774,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":28,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:46  {"level":30,"time":1778756386979,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":29,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:47  {"level":30,"time":1778756387781,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":30,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:48  {"level":30,"time":1778756388144,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":31,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":2,"msg":"request completed"}
+May 14 10:59:48  {"level":30,"time":1778756388570,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":32,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 10:59:48  {"level":30,"time":1778756388838,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":33,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:48  {"level":30,"time":1778756388846,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":34,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+May 14 10:59:49  {"level":30,"time":1778756389243,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":35,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:49  {"level":30,"time":1778756389431,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":36,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:49  {"level":30,"time":1778756389705,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":37,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:49  {"level":30,"time":1778756389746,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":38,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:50  {"level":30,"time":1778756390377,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":39,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:50  {"level":30,"time":1778756390388,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":40,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:50  {"level":30,"time":1778756390650,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":41,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:52  {"level":30,"time":1778756392520,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":42,"method":"POST","url":"/api/sso/issue"},"res":{"statusCode":200},"responseTime":18,"msg":"request completed"}
+May 14 11:00:11  {"level":30,"time":1778756411242,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":43,"method":"GET","url":"/"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 11:00:12  {"level":30,"time":1778756412191,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":44,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":14,"msg":"request completed"}
+May 14 11:00:12  {"level":30,"time":1778756412234,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":45,"method":"GET","url":"/assets/SignSuiteIQ_v4_clean_no_icons_1776093556689-DZS5LAGq.png"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 11:00:12  {"level":30,"time":1778756412866,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":46,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+May 14 11:00:13  {"level":30,"time":1778756413134,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":47,"method":"GET","url":"/assets/SignSalesIQ_Logo_nobg-CMrE9ZJv.png"},"res":{"statusCode":200},"responseTime":11,"msg":"request completed"}
+May 14 11:00:21  {"level":30,"time":1778756421241,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":48,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 11:00:21  {"level":30,"time":1778756421289,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":49,"method":"GET","url":"/api/public/plans"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 11:00:21  {"level":30,"time":1778756421327,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":50,"method":"GET","url":"/favicon.svg"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 11:00:23  {"level":30,"time":1778756423442,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":51,"method":"GET","url":"/models/tiny_face_detector_model-weights_manifest.json"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 11:00:24  {"level":30,"time":1778756424078,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":52,"method":"GET","url":"/models/face_landmark_68_tiny_model.bin"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 11:00:24  {"level":30,"time":1778756424097,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":53,"method":"GET","url":"/models/tiny_face_detector_model.bin"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 11:00:41  {"level":30,"time":1778756441650,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":54,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+May 14 11:01:06  {"level":30,"time":1778756466190,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","userId":1,"role":"super_admin","msg":"User logged in"}
+May 14 11:01:06  {"level":30,"time":1778756466191,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":55,"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":139,"msg":"request completed"}
+May 14 11:01:06  {"level":30,"time":1778756466525,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":56,"method":"GET","url":"/api/public/plans"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 11:01:07  {"level":30,"time":1778756467926,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":57,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 11:01:08  {"level":30,"time":1778756468021,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":58,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":95,"msg":"request completed"}
+May 14 11:01:08  {"level":30,"time":1778756468023,"pid":30,"hostname":"signsuiteai-5c66cfbfc8-qmn2t","req":{"id":59,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":95,"msg":"request completed"}
+May 14 10:58:13  
+May 14 10:58:13  > workspace@0.0.0 start /workspace
+May 14 10:58:13  > node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+May 14 10:58:13  
+May 14 10:58:14  {"level":30,"time":1778756294930,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","FRONTEND_DIST":"/workspace/artifacts/signsuiteiq/dist/public","msg":"Serving SignSuiteIQ static build"}
+May 14 10:58:14  {"level":30,"time":1778756294935,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"─── SignSuiteIQ database bootstrap ───"}
+May 14 10:58:14  {"level":30,"time":1778756294935,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"Running 32 migrations…"}
+May 14 10:58:15  {"level":30,"time":1778756295022,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_users"}
+May 14 10:58:15  {"level":30,"time":1778756295028,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ users_add_company_id"}
+May 14 10:58:15  {"level":30,"time":1778756295038,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ users_add_archived_at"}
+May 14 10:58:15  {"level":30,"time":1778756295044,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ users_add_welcome_sent_at"}
+May 14 10:58:15  {"level":30,"time":1778756295050,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ users_add_deleted_at"}
+May 14 10:58:15  {"level":30,"time":1778756295053,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ users_add_cascade_deleted_by"}
+May 14 10:58:15  {"level":30,"time":1778756295057,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_business_details"}
+May 14 10:58:15  {"level":30,"time":1778756295061,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ business_details_add_active_plan_key"}
+May 14 10:58:15  {"level":30,"time":1778756295065,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ business_details_add_admin_id"}
+May 14 10:58:15  {"level":30,"time":1778756295072,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ users_add_company_fk"}
+May 14 10:58:15  {"level":30,"time":1778756295076,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_products_config"}
+May 14 10:58:15  {"level":30,"time":1778756295080,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ products_config_add_monthly_price"}
+May 14 10:58:15  {"level":30,"time":1778756295082,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ products_config_add_discount_price"}
+May 14 10:58:15  {"level":30,"time":1778756295086,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ products_config_add_coming_soon"}
+May 14 10:58:15  {"level":30,"time":1778756295088,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_plans_config"}
+May 14 10:58:15  {"level":30,"time":1778756295091,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ plans_config_add_products"}
+May 14 10:58:15  {"level":30,"time":1778756295094,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ plans_config_add_coming_soon"}
+May 14 10:58:15  {"level":30,"time":1778756295096,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_site_content"}
+May 14 10:58:15  {"level":30,"time":1778756295099,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_user_app_access"}
+May 14 10:58:15  {"level":30,"time":1778756295104,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_user_subscriptions"}
+May 14 10:58:15  {"level":30,"time":1778756295109,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ idx_user_subscriptions_user"}
+May 14 10:58:15  {"level":30,"time":1778756295112,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ idx_user_subscriptions_customer"}
+May 14 10:58:15  {"level":30,"time":1778756295114,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ user_subscriptions_add_payment_method_brand"}
+May 14 10:58:15  {"level":30,"time":1778756295117,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ user_subscriptions_add_payment_method_last4"}
+May 14 10:58:15  {"level":30,"time":1778756295129,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ user_subscriptions_add_receipt_url"}
+May 14 10:58:15  {"level":30,"time":1778756295140,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ idx_user_subscriptions_created_at"}
+May 14 10:58:15  {"level":30,"time":1778756295144,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ user_subscriptions_add_archived_at"}
+May 14 10:58:15  {"level":30,"time":1778756295146,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ idx_user_subscriptions_archived_at"}
+May 14 10:58:15  {"level":30,"time":1778756295150,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ create_sso_codes"}
+May 14 10:58:15  {"level":30,"time":1778756295154,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ idx_sso_codes_user"}
+May 14 10:58:15  {"level":30,"time":1778756295156,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ idx_sso_codes_expires"}
+May 14 10:58:15  {"level":30,"time":1778756295159,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ products_config_page_content"}
+May 14 10:58:15  {"level":30,"time":1778756295159,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"✓ All migrations applied"}
+May 14 10:58:15  {"level":30,"time":1778756295159,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"Running seeds…"}
+May 14 10:58:15  {"level":30,"time":1778756295170,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ products_config (3 default products)"}
+May 14 10:58:15  {"level":30,"time":1778756295192,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ plans_config (4 default plans)"}
+May 14 10:58:15  {"level":30,"time":1778756295202,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ site_content (4 default keys)"}
+May 14 10:58:15  {"level":30,"time":1778756295238,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ business_details snapshot (0 inserted, 11 already existed) — 11 total"}
+May 14 10:58:15  {"level":30,"time":1778756295360,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ users snapshot (0 inserted, 44 already existed) — 44 total"}
+May 14 10:58:15  {"level":30,"time":1778756295421,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ✓ user_subscriptions snapshot (0 inserted, 5 already existed) — 5 total"}
+May 14 10:58:15  {"level":30,"time":1778756295425,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"  ⊘ super_admin (developmentexpert121@gmail.com) already exists — skipping"}
+May 14 10:58:15  {"level":30,"time":1778756295425,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"✓ All seeds applied"}
+May 14 10:58:15  {"level":30,"time":1778756295425,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"─── bootstrap complete ───"}
+May 14 10:58:15  {"level":30,"time":1778756295430,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"Initializing Stripe schema..."}
+May 14 10:58:15  {"level":30,"time":1778756295497,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"Stripe schema ready"}
+May 14 10:58:15  { autoExpandLists: undefined, stripeApiVersion: undefined } StripeSync initialized
+May 14 10:58:15  {"level":30,"time":1778756295511,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","port":8080,"msg":"Server listening"}
+May 14 10:58:15  error: relation "stripe.accounts" does not exist
+May 14 10:58:15      at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 14 10:58:15      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 14 10:58:15      at async PostgresClient.getAccountIdByApiKeyHash (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:239:20)
+May 14 10:58:15      at async StripeSync.getAccountId (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:583:25)
+May 14 10:58:15      at async StripeSync.getCurrentAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:632:5)
+May 14 10:58:15      at async StripeSync.syncBackfill (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:1160:5) {
+May 14 10:58:15    length: 114,
+May 14 10:58:15    severity: 'ERROR',
+May 14 10:58:15    code: '42P01',
+May 14 10:58:15    detail: undefined,
+May 14 10:58:15    hint: undefined,
+May 14 10:58:15    position: '16',
+May 14 10:58:15    internalPosition: undefined,
+May 14 10:58:15    internalQuery: undefined,
+May 14 10:58:15    where: undefined,
+May 14 10:58:15    schema: undefined,
+May 14 10:58:15    table: undefined,
+May 14 10:58:15    column: undefined,
+May 14 10:58:15    dataType: undefined,
+May 14 10:58:15    constraint: undefined,
+May 14 10:58:15    file: 'parse_relation.c',
+May 14 10:58:15    line: '1445',
+May 14 10:58:15    routine: 'parserOpenTable'
+May 14 10:58:15  } Failed to lookup account by API key hash, falling back to API
+May 14 10:58:16  error: relation "stripe.accounts" does not exist
+May 14 10:58:16      at <anonymous> (/workspace/node_modules/.pnpm/pg-pool@3.13.0_pg@8.20.0/node_modules/pg-pool/index.js:45:11)
+May 14 10:58:16      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+May 14 10:58:16      at async PostgresClient.upsertAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:206:5)
+May 14 10:58:16      at async StripeSync.upsertAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:612:7)
+May 14 10:58:16      at async StripeSync.getAccountId (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:602:5)
+May 14 10:58:16      at async StripeSync.getCurrentAccount (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:632:5)
+May 14 10:58:16      at async StripeSync.syncBackfill (/workspace/node_modules/.pnpm/stripe-replit-sync@1.0.0_stripe@20.0.0_@types+node@25.3.5_/node_modules/stripe-replit-sync/dist/index.js:1160:5) {
+May 14 10:58:16    length: 114,
+May 14 10:58:16    severity: 'ERROR',
+May 14 10:58:16    code: '42P01',
+May 14 10:58:16    detail: undefined,
+May 14 10:58:16    hint: undefined,
+May 14 10:58:16    position: '13',
+May 14 10:58:16    internalPosition: undefined,
+May 14 10:58:16    internalQuery: undefined,
+May 14 10:58:16    where: undefined,
+May 14 10:58:16    schema: undefined,
+May 14 10:58:16    table: undefined,
+May 14 10:58:16    column: undefined,
+May 14 10:58:16    dataType: undefined,
+May 14 10:58:16    constraint: undefined,
+May 14 10:58:16    file: 'parse_relation.c',
+May 14 10:58:16    line: '1445',
+May 14 10:58:16    routine: 'parserOpenTable'
+May 14 10:58:16  } Failed to upsert account to database
+May 14 10:58:16  {"level":40,"time":1778756296565,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"Stripe backfill skipped: stripe-replit-sync tables not present in this database (non-blocking)"}
+May 14 10:59:38  {"level":30,"time":1778756378546,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":1,"method":"GET","url":"/assets/index-CCcIZGpd.js"},"res":{"statusCode":200},"responseTime":45,"msg":"request completed"}
+May 14 10:59:38  {"level":30,"time":1778756378558,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":2,"method":"GET","url":"/assets/index-CsYxW2AM.css"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+May 14 10:59:39  {"level":30,"time":1778756379313,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":3,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":82,"msg":"request completed"}
+May 14 10:59:39  {"level":30,"time":1778756379343,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":4,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":14,"msg":"request completed"}
+May 14 10:59:39  {"level":30,"time":1778756379621,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":5,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+May 14 10:59:40  {"level":30,"time":1778756380312,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":7,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":72,"msg":"request completed"}
+May 14 10:59:40  {"level":30,"time":1778756380315,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":6,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":76,"msg":"request completed"}
+May 14 10:59:40  {"level":30,"time":1778756380323,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":8,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":80,"msg":"request completed"}
+May 14 10:59:40  {"level":30,"time":1778756380676,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":9,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+May 14 10:59:41  {"level":30,"time":1778756381296,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":10,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":9,"msg":"request completed"}
+May 14 10:59:43  {"level":30,"time":1778756383127,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":11,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:43  {"level":30,"time":1778756383238,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":12,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 10:59:43  {"level":30,"time":1778756383871,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":13,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:43  {"level":30,"time":1778756383887,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":14,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":12,"msg":"request completed"}
+May 14 10:59:44  {"level":30,"time":1778756384283,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":15,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":9,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385086,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":16,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385144,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":17,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385978,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":18,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:45  {"level":30,"time":1778756385980,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":19,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:47  {"level":30,"time":1778756387181,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":20,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 10:59:47  {"level":30,"time":1778756387191,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":21,"method":"GET","url":"/api/admin/companies"},"res":{"statusCode":200},"responseTime":9,"msg":"request completed"}
+May 14 10:59:47  {"level":30,"time":1778756387232,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":22,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+May 14 10:59:47  {"level":30,"time":1778756387378,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":23,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:48  {"level":30,"time":1778756388419,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":24,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":12,"msg":"request completed"}
+May 14 10:59:48  {"level":30,"time":1778756388845,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":25,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:49  {"level":30,"time":1778756389017,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":26,"method":"GET","url":"/dashboard"},"res":{"statusCode":200},"responseTime":3,"msg":"request completed"}
+May 14 10:59:49  {"level":30,"time":1778756389703,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":27,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 10:59:49  {"level":30,"time":1778756389729,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":28,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+May 14 10:59:50  {"level":30,"time":1778756390386,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":29,"method":"GET","url":"/api/admin/products_config"},"res":{"statusCode":200},"responseTime":10,"msg":"request completed"}
+May 14 11:00:12  {"level":30,"time":1778756412220,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":30,"method":"GET","url":"/api/public/plans"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 11:00:12  {"level":30,"time":1778756412824,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":31,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 11:00:12  {"level":30,"time":1778756412867,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":32,"method":"GET","url":"/api/public/plans"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 11:00:13  {"level":30,"time":1778756413148,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":33,"method":"GET","url":"/assets/InstalliQ_Logo_nobg-BaXYiafr.png"},"res":{"statusCode":200},"responseTime":20,"msg":"request completed"}
+May 14 11:00:20  {"level":30,"time":1778756420540,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":34,"method":"GET","url":"/"},"res":{"statusCode":200},"responseTime":4,"msg":"request completed"}
+May 14 11:00:21  {"level":30,"time":1778756421249,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":35,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+May 14 11:00:23  {"level":30,"time":1778756423432,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":36,"method":"GET","url":"/models/face_recognition_model-weights_manifest.json"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 11:00:23  {"level":30,"time":1778756423441,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":37,"method":"GET","url":"/models/face_landmark_68_tiny_model-weights_manifest.json"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+May 14 11:00:24  {"level":30,"time":1778756424958,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":38,"method":"GET","url":"/models/face_recognition_model.bin"},"res":{"statusCode":200},"responseTime":671,"msg":"request completed"}
+May 14 11:00:41  {"level":30,"time":1778756441656,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":39,"method":"GET","url":"/api/public/plans"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+May 14 11:00:47  {"level":30,"time":1778756447978,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","msg":"Face login: no match found"}
+May 14 11:00:47  {"level":30,"time":1778756447982,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":40,"method":"POST","url":"/api/auth/face-login"},"res":{"statusCode":401},"responseTime":16,"msg":"request completed"}
+May 14 11:01:06  {"level":30,"time":1778756466534,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":41,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+May 14 11:01:06  {"level":30,"time":1778756466607,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":42,"method":"GET","url":"/api/public/products"},"res":{"statusCode":200},"responseTime":78,"msg":"request completed"}
+May 14 11:01:08  {"level":30,"time":1778756468352,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":43,"method":"GET","url":"/api/admin/stats"},"res":{"statusCode":200},"responseTime":78,"msg":"request completed"}
+May 14 11:01:09  {"level":30,"time":1778756469385,"pid":31,"hostname":"signsuiteai-5c66cfbfc8-rkwt5","req":{"id":44,"method":"POST","url":"/api/sso/issue"},"res":{"statusCode":200},"responseTime":16,"msg":"request completed"}

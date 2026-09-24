@@ -1,0 +1,38 @@
+Background / Ambient Effects
+
+Aurora — Three large blurred blobs slowly drift and shift colors in the background (orange/primary tones) using CSS @keyframes. They loop infinitely and create a soft glowing aurora effect.
+Constellation Canvas — A live canvas with 30 floating dots that drift around slowly. Lines are drawn between any two dots within 100px of each other, fading based on distance. Runs continuously via requestAnimationFrame.
+Floating Particles — 10 small dots float upward from the bottom of the panel with randomized sizes, speeds (5–12s), and delays, looping infinitely.
+Background Orbs — Two large blurred gradient circles on the left panel that gently float up and down on separate slow cycles (8s and 10s).
+Mouse Spotlight — A large soft radial gradient follows the user's cursor across the right panel (700ms eased transition), creating a subtle illumination effect.
+Login Card
+
+Scale-in Entrance — The card scales in from slightly smaller to full size on page load (0.5s, with a 0.2s delay).
+Tilt on Hover — The card tilts up to ±8° on both axes as the mouse moves over it. A glare/shine gradient also follows the cursor position. Both reset smoothly on mouse leave.
+Card Glow — A soft glowing ring pulses slowly around the card border via a ::before pseudo-element.
+Form Fields
+
+Staggered Entrance — Each field group slides up and fades in one after another with staggered delays (0.3s → 0.45s → 0.6s → 0.75s → 0.9s), so the form appears to "build" from top to bottom.
+Input Focus Scale — When an email or password field is focused, the input wrapper scales up very slightly (scale-[1.01]) and the icon color transitions to the primary color.
+Input Glow — A glowing ring/shadow appears around the focused input field.
+Sign In Button
+
+Shimmer Sweep — A white highlight sweeps diagonally across the button on a loop, giving it a glowing sheen effect.
+Hover Scale / Active Press — Scales up slightly on hover (scale-[1.02]) and presses down on click (scale-[0.98]).
+Arrow Icon Slide — The arrow icon inside the button slides slightly to the right on hover.
+Ripple on Click — Clicking the button spawns a circular ripple that expands and fades out from the exact click position (600ms).
+Left Panel — Branding / Stats
+
+Typewriter — The headline subtitle cycles through multiple phrases, typing each one out character by character (80ms/char), pausing for 2s, then deleting it (40ms/char) and moving to the next.
+Animated Counters — The stat numbers (10K+, 500+, 50K+) count up from 0 to their target on load using an ease-out cubic curve over 2 seconds.
+Gradient Text — The main heading uses an animated shifting gradient that cycles through colors with a 6s loop (background-size: 200%).
+Feature Item Hover — Feature list items shift slightly to the right and lighten on hover.
+Stat Item Hover — Stat boxes have a subtle scale/glow on hover.
+Orbs (left panel) — Three glowing orbs drift with separate timings (8s, 10s, 12s) layered behind the content.
+Miscellaneous
+
+Security Badge Check Icons — The checkmarks on the SSL/SOC2 trust badges have a small draw-on animation (SVG stroke animation).
+"Or" Separator Lines — The divider lines on either side of the "or" text have a shimmer/animated gradient sweep.
+Dot Bounce Loader — A 3-dot bouncing indicator (staggered 0.16s apart) appears in certain loading states.
+Version Tag — Fades in when Ctrl/Cmd-clicked on the logo icon.
+reduce-motion support — All of the above animations are disabled/paused when the user has prefers-reduced-motion: reduce set in their OS.
